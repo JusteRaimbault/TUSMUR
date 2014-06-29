@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2011)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: synthese.aux
+The style file: plain.bst
+Database file #1: /Users/Juste/Documents/Cours/TAMUR/Biblio/biblio.bib
+Warning--to sort, need author, editor, or key in indik_indi
+Warning--to sort, need editor, organization, or key in aw
+Warning--to sort, need editor, organization, or key in bonard
+Warning--empty author and editor in indik_indi
+You've used 14 entries,
+            2118 wiz_defined-function locations,
+            571 strings with 6133 characters,
+and the built_in function-call counts, 3413 in all, are:
+= -- 327
+> -- 149
+< -- 1
++ -- 62
+- -- 48
+* -- 214
+:= -- 601
+add.period$ -- 38
+call.type$ -- 14
+change.case$ -- 62
+chr.to.int$ -- 0
+cite$ -- 18
+duplicate$ -- 147
+empty$ -- 284
+format.name$ -- 48
+if$ -- 701
+int.to.chr$ -- 0
+int.to.str$ -- 14
+missing$ -- 9
+newline$ -- 67
+num.names$ -- 22
+pop$ -- 74
+preamble$ -- 1
+purify$ -- 52
+quote$ -- 0
+skip$ -- 87
+stack$ -- 0
+substring$ -- 122
+swap$ -- 15
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 48
+warning$ -- 4
+while$ -- 27
+width$ -- 16
+write$ -- 140
+(There were 4 warnings)

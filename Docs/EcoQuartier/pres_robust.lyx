@@ -1,0 +1,682 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass beamer
+\begin_preamble
+\usetheme{Warsaw}
+\setbeamercolor{structure}{fg=purple!50!blue, bg=purple!50!blue}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Robustesse d'une évaluation intégrée
+\end_layout
+
+\begin_layout Subtitle
+Application des méthodes d'approximation d'intégrales aux évaluation des
+ performances d'Eco-quartiers
+\end_layout
+
+\begin_layout BeginFrame
+Motivation
+\end_layout
+
+\begin_layout Standard
+Un même 
+\begin_inset Quotes eld
+\end_inset
+
+fait urbain
+\begin_inset Quotes erd
+\end_inset
+
+ (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "mangin1999projet"
+
+\end_inset
+
+) peut avoir plusieurs réalisations à différents niveaux et sous différentes
+ formes.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Q : après avoir défini un référentiel global pour évaluer les réalisations
+ ; peut-on définir une robustesse des évaluations par rapport à celui-ci
+ ? Si possible en amont de la définition des indicateurs (robustesse structurell
+e) ?
+\end_layout
+
+\begin_layout BeginFrame
+Cadre
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Prise en compte robustesse statistiques par rapport aux données du cas,
+ ainsi que de la fiabilité du nombre de dimensions prises en compte.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Multi-Criteria Decision Analysis essentielle pour le développement durable
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "wang2009review"
+
+\end_inset
+
+ : pondération des critères pour une approche aggrégée.
+ On se placera dans le cadre d'une aggrégation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Cadre : travaux statistiques récents 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "varet2010developpement"
+
+\end_inset
+
+ pour l'approximation d'intégrales appliquables à de nombreux domaines,
+ permettant de combiner les deux approches précedentes.
+\end_layout
+
+\begin_layout BeginFrame
+Formulation
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(S_{i})_{1\leq i\leq N}$
+\end_inset
+
+ systèmes territoriaux disjoints (les 
+\begin_inset Quotes eld
+\end_inset
+
+éco-quartiers
+\begin_inset Quotes erd
+\end_inset
+
+) représentés par des jeux de données et des indicateurs intermédiaires
+ :
+\begin_inset Formula 
+\[
+S_{i}=(\mathbf{X}_{i},\mathbf{Y}_{i})\in\mathcal{X}_{i}\times\mathcal{Y}_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Avec 
+\begin_inset Formula $\mathcal{X}_{i}=\prod_{k}\mathcal{X}_{i,k}$
+\end_inset
+
+ et 
+\begin_inset Formula $\mathcal{X}_{i,k}=\mathbb{R}^{n_{i,k}^{X}p_{i,k}^{X}}$
+\end_inset
+
+ (idem pour les 
+\begin_inset Formula $\mathcal{Y}_{i}$
+\end_inset
+
+) et 
+\begin_inset Formula $I_{X}(i,k)$
+\end_inset
+
+ (resp.
+ 
+\begin_inset Formula $I_{Y}(i,k)$
+\end_inset
+
+) fonction de désignation du type de variable (resp.
+ de l'indicateur)
+\end_layout
+
+\begin_layout Definition
+L'espace partiel caractéristique du fait urbain est 
+\begin_inset Formula $(\mathcal{X},\mathcal{Y})\underset{def}{=}(\prod\tilde{\mathcal{X}}_{c})\times(\prod\tilde{\mathcal{Y}}_{c})=(\prod_{\mathcal{X}_{i,k}\in\mathcal{D}_{\mathcal{X}}}\mathbb{R}^{p_{i,k}^{X}})\times(\prod_{\mathcal{Y}_{i,k}\in\mathcal{D}_{\mathcal{Y}}}\mathbb{R}^{p_{i,k}^{Y}})$
+\end_inset
+
+, avec 
+\begin_inset Formula $\mathcal{D}_{\mathcal{X}}=\{\mathcal{X}_{i,k}|I(i,k)\textrm{ distincts}\}$
+\end_inset
+
+ (idem pour les 
+\begin_inset Formula $\mathcal{Y}_{i}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout BeginFrame
+Fonctions d'évaluation
+\end_layout
+
+\begin_layout Standard
+On note dans la suite 
+\begin_inset Formula $\mathbf{X}_{i,c}$
+\end_inset
+
+ les données projetées par injection canonique dans l'espace correspondant
+ au type de données, bien définies pour tout 
+\begin_inset Formula $i$
+\end_inset
+
+ et tout 
+\begin_inset Formula $c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+Soit 
+\begin_inset Formula $H_{c}$
+\end_inset
+
+ un espace de fonctions sur 
+\begin_inset Formula $(\tilde{\mathcal{X}}_{c},\tilde{\mathcal{Y}}_{c})$
+\end_inset
+
+ à valeur dans 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ tel que pour tout 
+\begin_inset Formula $h\in H_{c}$
+\end_inset
+
+ : 
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $\circ$
+\end_inset
+
+ h est 
+\begin_inset Quotes eld
+\end_inset
+
+suffisamment régulière
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $\circ$
+\end_inset
+
+ 
+\begin_inset Formula $q=\int_{(\tilde{\mathcal{X}}_{c},\tilde{\mathcal{Y}}_{c})}h$
+\end_inset
+
+ est une fonction de qualification du fait urbain
+\end_layout
+
+\begin_layout Definition
+
+\end_layout
+
+\begin_layout Example
+Pour une moyenne des lignes de 
+\begin_inset Formula $\mathbf{X}_{i,c}$
+\end_inset
+
+, on aura 
+\begin_inset Formula $h(x)=x\cdot f_{i,c}$
+\end_inset
+
+ avec 
+\begin_inset Formula $f_{i,c}$
+\end_inset
+
+ densité de la distribution.
+\begin_inset Newline newline
+\end_inset
+
+Pour un taux suivant une certaine condition, on aura 
+\begin_inset Formula $f_{i,c}\chi_{condition}$
+\end_inset
+
+ ; etc
+\begin_inset Newline newline
+\end_inset
+
+Pour les Y on aura en général un Dirac (pour les calculs aggrégés).
+\end_layout
+
+\begin_layout BeginFrame
+Pondération des critères
+\end_layout
+
+\begin_layout Standard
+On donne des poids aux critères pour chaque réalisation :
+\end_layout
+
+\begin_layout Standard
+Pour 
+\begin_inset Formula $i,c$
+\end_inset
+
+ et 
+\begin_inset Formula $h_{c}\in H_{c}$
+\end_inset
+
+ donnés, 
+\begin_inset Formula $w_{i,c}$
+\end_inset
+
+ est une combinaison (suivant 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "wang2009review"
+
+\end_inset
+
+) de :
+\end_layout
+
+\begin_layout Itemize
+poids objectif : importance locale du critère 
+\begin_inset Formula $w_{i,c}^{L}=\frac{\hat{q}_{i,c}}{\sum_{c}\hat{q}_{i,c}}$
+\end_inset
+
+ où 
+\begin_inset Formula $\hat{q}_{i,c}$
+\end_inset
+
+ est un estimateur de 
+\begin_inset Formula $q_{c}$
+\end_inset
+
+ pour les données 
+\begin_inset Formula $\mathbf{X}_{i,c}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+poids subjectif : différentes méthodes (notations, ordre d'importance etc)
+ revues dans 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "wang2009review"
+
+\end_inset
+
+ pour donner un poids subjectif normalisé (à voir lesquelles)
+\end_layout
+
+\begin_layout BeginFrame
+Application des méthodes d'approximation d'intégrales
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset citation
+LatexCommand cite
+key "varet2010developpement"
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Avec 
+\begin_inset Formula $\mathbf{X}_{i,c}=(\vec{X}_{i,c,l})_{1\leq l\leq n_{i,c}}$
+\end_inset
+
+, 
+\begin_inset Formula $D_{i,c}=Discp_{\tilde{\mathcal{X}}_{c},\infty}(\mathbf{X}_{i,c})$
+\end_inset
+
+ la discrépance du nuage de points (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "niederreiter1972discrepancy"
+
+\end_inset
+
+) et 
+\begin_inset Formula $h\in H_{c}$
+\end_inset
+
+, on a la majoration de l'erreur sur l'intégrale
+\begin_inset Formula 
+\[
+\left\Vert \int h_{c}-\frac{1}{n_{i,c}}\sum_{l}h_{c}(\vec{X}_{i,c,l})\right\Vert \leq K\cdot\left|\left|\left|h_{c}\right|\right|\right|\cdot D_{i,c}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+
+\end_layout
+
+\begin_layout Theorem
+
+\end_layout
+
+\begin_layout Standard
+On a alors directement 
+\begin_inset Formula $\left\Vert \int\sum w_{i,c}h_{c}-\frac{1}{n_{i,c}}\sum_{l}w_{i,c}h_{c}(\vec{X}_{i,c,l})\right\Vert \leq K\sum_{c}\left|\left|\left|h_{c}\right|\right|\right|\cdot D_{i,c}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout BeginFrame
+Application des méthodes d'approximation d'intégrales
+\end_layout
+
+\begin_layout Definition
+En supposant les espaces d'indicateurs normés, on définit alors un ratio
+ de robustesse pour comparer deux évaluations de deux réalisations du fait
+ urbain
+\begin_inset Formula 
+\[
+R_{i,i'}=\frac{\sum_{c}w_{i,c}\cdot D_{i,c}}{\sum_{c}w_{i',c}\cdot D_{i',c}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+
+\end_layout
+
+\begin_layout Standard
+En définissant une relation d'ordre sur les réalisations par rapport à la
+ position du ratio à 1, on définit un ordre complet sur les évaluations.
+\end_layout
+
+\begin_layout BeginFrame
+Données : collecte difficile
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Report/dataBussy.png
+	lyxscale 10
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Données : uniformisation difficile
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Report/indicsData.png
+	lyxscale 10
+	scale 27
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Implémentation
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Traitement des données GIS et export en format standard : QGIS et NL
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Inférence des données manquantes selon distribution statistiques raisonnables.
+ Normalisation des données : gain monétaire de l'emission de CO
+\begin_inset Formula $_{2}$
+\end_inset
+
+ par proportion de report modal traduite par l'indicateur.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Implémentation des calculs statistiques sous R : calcul de la discrépance
+ déjà implémenté 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "bundschuh1993method"
+
+\end_inset
+
+ : package 
+\begin_inset Formula $\mathtt{DiceDesign}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Résultats
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Ratio de robustesse avec tous les indicateurs : 
+\begin_inset Formula $R_{D,B}=0.87$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Test de différentes combinaisons : comportement anarchique.
+ Trop peu d'indicateurs ? Intersection trop petite ? (3 indicateurs).
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Scénarisation via selections d'indicateurs ? necessite plus de données et
+ d'indicateurs.
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}[allowframebreaks]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+frametitle{References}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "/Users/Juste/Documents/ComplexSystems/Biblio/BibTeX/global,/Users/Juste/Documents/Cours/TAMUR/Biblio/ecoquartier,/Users/Juste/Documents/ComplexSystems/Biblio/Culture/BibTex/culture"
+options "apalike"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\end_body
+\end_document

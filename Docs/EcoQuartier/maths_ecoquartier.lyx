@@ -1,0 +1,283 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass amsart
+\begin_preamble
+\titlerunning{Robustesse d'une évaluation intégrée}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Robustesse d'une évaluation intégrée : Application des méthodes d'approximation
+ d'intégrales
+\end_layout
+
+\begin_layout Abstract
+Etant donné différentes réalisations d'un même 
+\begin_inset Quotes eld
+\end_inset
+
+fait urbain
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "mangin1999projet"
+
+\end_inset
+
+, il est souhaitable de pouvoir extraire des indicateurs relativement généraux
+ et intégrés afin de quantifier de manière objective un système donné sur
+ son niveau de performance au regard d'objectifs voulus pour la concretisation
+ de ce fait abstrait.
+ On s'interesse particulièrement au fait urbain récent des 
+\begin_inset Quotes eld
+\end_inset
+
+eco-quartiers
+\begin_inset Quotes erd
+\end_inset
+
+, dont les définitions peuvent être assez diverses mais dont le thème général
+ reste la conception d'un tissu urbain de manière 
+\begin_inset Quotes eld
+\end_inset
+
+intégrée
+\begin_inset Quotes erd
+\end_inset
+
+ (prenant en compte de manière cohérente de multiples objectifs hétérogènes)
+ satisfaisant à des critères de développement durable 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "souami2012ecoquartiers"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On se donne un nombre fini 
+\begin_inset Formula $(S_{i})_{1\leq i\leq N}$
+\end_inset
+
+ de systèmes territoriaux disjoints (les 
+\begin_inset Quotes eld
+\end_inset
+
+éco-quartiers
+\begin_inset Quotes erd
+\end_inset
+
+) représentés par des jeux de données et des indicateurs intermédiaires
+ :
+\begin_inset Formula 
+\[
+S_{i}=(\mathbf{X}_{i},\mathbf{Y}_{i})\in\mathcal{X}_{i}\times\mathcal{Y}_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Avec 
+\begin_inset Formula $\mathcal{X}_{i}=\prod_{k}\mathcal{X}_{i,k}$
+\end_inset
+
+ et 
+\begin_inset Formula $\mathcal{X}_{i,k}=\mathbb{R}^{n_{i,k}^{X}p_{i,k}^{X}}$
+\end_inset
+
+ (idem pour les 
+\begin_inset Formula $\mathcal{Y}_{i}$
+\end_inset
+
+) et 
+\begin_inset Formula $I_{X}(i,k)$
+\end_inset
+
+ (resp.
+ 
+\begin_inset Formula $I_{Y}(i,k)$
+\end_inset
+
+) fonction de désignation du type de variable (resp.
+ de l'indicateur)
+\end_layout
+
+\begin_layout Standard
+On distingue les 
+\begin_inset Quotes eld
+\end_inset
+
+données brutes
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Formula $\mathbf{X}_{i}$
+\end_inset
+
+ à partir desquelles sont calculées des indicateurs via des fonctions explicites
+, des 
+\begin_inset Quotes eld
+\end_inset
+
+indicateurs
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Formula $\mathbf{Y}_{i}$
+\end_inset
+
+ qui pourront déjà être sorties de modèles élaborées, en général calculés
+ via des modèles agents représentant un aspect du système territorial.
+\end_layout
+
+\begin_layout Standard
+!!!REVOIR CHAMPS SPATIAUX!!!
+\end_layout
+
+\begin_layout Standard
+[Les espaces seront généralement de dimension finie, mais on pourra utiliser
+ par exemple des champs spatiaux, et 
+\begin_inset Formula $\mathbf{X}_{i}$
+\end_inset
+
+ peut contenir 
+\begin_inset Formula $\mathcal{C}^{K}(\mathbb{R}^{2},\mathbb{R}^{p})$
+\end_inset
+
+.
+ Certains indicateurs sont en effet pertinents comme fonctions de champs
+ spatiaux.
+ En pratique cependant, les espaces ne seront jamais de dimension infinie
+ car on discrétise les champs en couches géographiques raster ce qui revient
+ à identifier le champ à un vecteur de 
+\begin_inset Formula $\mathbb{R}^{p'}$
+\end_inset
+
+.]
+\end_layout
+
+\begin_layout Definition
+L'espace partiel caractéristique du fait urbain est 
+\begin_inset Formula 
+\[
+(\mathcal{X},\mathcal{Y})\underset{def}{=}(\prod\tilde{\mathcal{X}}_{c})\times(\prod\tilde{\mathcal{Y}}_{c})=(\prod_{\mathcal{X}_{i,k}\in\mathcal{D}_{\mathcal{X}}}\mathbb{R}^{p_{i,k}^{X}})\times(\prod_{\mathcal{Y}_{i,k}\in\mathcal{D}_{\mathcal{Y}}}\mathbb{R}^{p_{i,k}^{Y}})
+\]
+
+\end_inset
+
+, avec 
+\begin_inset Formula $\mathcal{D}_{\mathcal{X}}=\{\mathcal{X}_{i,k}|I(i,k)\textrm{ distincts},n_{i,k}^{X}\mbox{ maximal}\}$
+\end_inset
+
+ (idem pour les 
+\begin_inset Formula $\mathcal{Y}_{i}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+Cet espace est partiel car les manifestations ponctuelles du fait ne peuvent
+ couvrir sa généralité (si elle existe) ; il s'agit tout de même de notre
+ espace de référence pour tenter de caractériser ce fait : on cherchera
+ donc à rassembler le plus de cas possibles afin d'obtenir une caractérisation
+ assez générale, ou bien on restreindra l'étude à un fait relativement bien
+ cerné afin d'avoir une robustesse d'évaluation la plus homogène possible
+ sur l'ensemble des cas.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "/Users/Juste/Documents/Cours/TAMUR/Biblio/ecoquartier,/Users/Juste/Documents/ComplexSystems/Biblio/BibTeX/global,/Users/Juste/Documents/ComplexSystems/Biblio/Culture/BibTex/culture"
+options "plain"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

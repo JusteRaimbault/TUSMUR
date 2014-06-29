@@ -1,0 +1,426 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass beamer
+\begin_preamble
+\usetheme{Warsaw}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Multi-criteria Decision Analysis
+\end_layout
+
+\begin_layout Subtitle
+Quelles méthodes systématiques pour l'optimisation multi-dimensionelle propre
+ au développement durable ?
+\end_layout
+
+\begin_layout BeginFrame
+Multi-dimensionalité
+\end_layout
+
+\begin_layout Standard
+Définition de durable ? E.
+ Fortin : 
+\begin_inset Quotes eld
+\end_inset
+
+Système durable = Système territorialisé et évolutif
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Par essence multiples objectifs qui sont contradictoires -> 
+\begin_inset Quotes eld
+\end_inset
+
+Compromis
+\begin_inset Quotes erd
+\end_inset
+
+ dans l'optimisation : trouver un point 
+\begin_inset Quotes eld
+\end_inset
+
+raisonnable
+\begin_inset Quotes erd
+\end_inset
+
+ sur un front de Pareto (dans un espace à définir) - importance des acteurs
+ : modélisation intégrée ? Pas forcément (cf modèles hydrologiques) mais
+ particulièrement vrai pour le développement durable.
+\end_layout
+
+\begin_layout BeginFrame
+Quelles méthodes ?
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Algorithmes évolutionnaires multi-objectif 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "reuillon2012algorithmes,alba1999survey"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+MCDA : transports (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "zietsman2006transportation"
+
+\end_inset
+
+), énergie, etc.
+ Revue des méthodes : 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "wang2009review"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+MCDA : principes généraux
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename mcda.png
+	lyxscale 10
+	scale 35
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Sélection des critères
+\end_layout
+
+\begin_layout Standard
+Points nécessaires :
+\end_layout
+
+\begin_layout Itemize
+Réalité macroscopique
+\end_layout
+
+\begin_layout Itemize
+Consistence
+\end_layout
+
+\begin_layout Itemize
+Indépendance
+\end_layout
+
+\begin_layout Itemize
+Mesurabilité
+\end_layout
+
+\begin_layout Itemize
+Comparabilité inter-critères (?)
+\end_layout
+
+\begin_layout Standard
+-> Méthodes numériques permettant sélection systématique (toujours une partie
+ arbitraire !) [LMS method, Delphi Method, Correlation Coefficient Method]
+\end_layout
+
+\begin_layout BeginFrame
+Pondération des critères
+\end_layout
+
+\begin_layout Standard
+Nécessité de pondérer : définit importance relative des critères
+\end_layout
+
+\begin_layout Itemize
+Pondération subjective : choix d'une hierarchie arbitraire
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+SMART, Pair-wise, algebra on correlation matrix : classement relatifs ->
+ poids absolu
+\end_layout
+
+\begin_layout Itemize
+classement subjectif absolu
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Pondération objective
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+classement par entropie
+\end_layout
+
+\begin_layout Itemize
+optimisation % 
+\begin_inset Quotes eld
+\end_inset
+
+ideal solution
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Combinaison poids objectifs et subjectifs
+\end_layout
+
+\begin_layout BeginFrame
+Evaluation des alternatives
+\end_layout
+
+\begin_layout Standard
+Etant donné une réalisation et une méthode de pondération, lui associer
+ une évaluation
+\end_layout
+
+\begin_layout Itemize
+Aggregation simple (somme ou produit) ou élaborée
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+Outranking methods
+\begin_inset Quotes erd
+\end_inset
+
+ : détermination de l'ordre non complet dans l'espace de Pareto
+\end_layout
+
+\begin_layout BeginFrame
+Conclusion
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Necessité d'une telle approche pour notre travail
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Choix de la méthode ? Selon les critères choisis, simplicité d'implémentation,
+ flexibilité (donc plutôt objectif) ; tout en restant pertinent -> se donner
+ une exigence de consistence (entropy-based weighting) en donnant sa place
+ à la subjectivité : weights combination.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Dnas tous les cas, analyses de sensibilité et comparaisons de différentes
+ méthodes.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}[allowframebreaks]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+frametitle{References}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "/Users/Juste/Documents/ComplexSystems/Biblio/BibTeX/global,/Users/Juste/Documents/Cours/TAMUR/Biblio/ecoquartier"
+options "apalike"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Questions
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset space \hfill{}
+\end_inset
+
+?
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\end_body
+\end_document

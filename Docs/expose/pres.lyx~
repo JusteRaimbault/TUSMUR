@@ -1,0 +1,1271 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass beamer
+\begin_preamble
+\usetheme{Warsaw}
+%\usetheme{Boadilla}
+% or ...
+
+\usecolortheme{orchid}
+\setbeamertemplate{footline}[text line]{} % makes the footer EMPTY
+
+\setbeamercovered{transparent}
+% or whatever (possibly just delete it)
+
+
+\usepackage{bbm}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 2
+\use_esint 0
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Sur les Modèles de Ségregation de Schelling
+\end_layout
+
+\begin_layout Subtitle
+Cours TAMUR - Exposé thématique
+\end_layout
+
+\begin_layout Author
+
+\noun on
+Juste Raimbault
+\end_layout
+
+\begin_layout Date
+19 mars 2014
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+AtBeginSection[]{
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+frame<beamer>{ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+frametitle{Outline}   
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+tableofcontents[currentsection] 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Outline
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Contexte et généralités
+\end_layout
+
+\begin_layout BeginFrame
+Introduction
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\noun on
+T.
+ C.
+ Schelling
+\noun default
+ : Economiste américain, contributions en Théorie des jeux et Sciences Sociales
+ computationelles.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Article fondateur : 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "schelling1969models"
+
+\end_inset
+
+, cherche à expliquer mathématiquement les phénomènes de ségrégation sociale
+ (très problématiques au Etats-Unis).
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Modèles d'un type particulier, précurseur dans la méthodologie de modélisation
+ et de simulation.
+\end_layout
+
+\begin_layout BeginFrame
+Contexte scientifique : Science des Systèmes Complexes
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Complexité: notion d'émergence et de 
+\shape italic
+self-organisation
+\shape default
+.
+ Précurseurs : Cybernétique (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "wiener1948cybernetics"
+
+\end_inset
+
+) puis Synergétique (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "haken1980synergetics"
+
+\end_inset
+
+).
+ Voir 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "newman2011complex"
+
+\end_inset
+
+ pour une revue récente d'une large vue du domaine, 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "chavalarias2009french"
+
+\end_inset
+
+ pour des enjeux de recherche actuels.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Application à l'étude des Systèmes Urbains : 
+\noun on
+J.
+ Jacobs
+\noun default
+ (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Jac56"
+
+\end_inset
+
+); 
+\noun on
+Batty 
+\noun default
+: 
+\begin_inset Quotes eld
+\end_inset
+
+Cities and complexity
+\begin_inset Quotes erd
+\end_inset
+
+ (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bat07"
+
+\end_inset
+
+).
+ Modélisation et simulations computationelles en Sciences Sociales : 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "varenne2010simulations"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Développement rapide aujourd'hui : travaux de physiciens (e.
+ g.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "2013arXiv1309.3961L"
+
+\end_inset
+
+) notamment grâce aux nouveau types de données, (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "2014arXiv1401.4540L"
+
+\end_inset
+
+); intéractions avec la géographie et sociologie quantitatives (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "banos2013HDR"
+
+\end_inset
+
+); 
+\begin_inset Quotes eld
+\end_inset
+
+A new science of cities
+\begin_inset Quotes erd
+\end_inset
+
+ ? (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "batty2013new"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Exemple de simulation multi-agents
+\end_layout
+
+\begin_layout Standard
+La série des modèles SIMPOP : modèles agent-based pour la simulation de
+ la croissance d'un système de villes à échelle continentale (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "pumain2012multi"
+
+\end_inset
+
+).
+ Fig.
+ d'après 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "bretagnolle2007deux"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename images/simpop.png
+	lyxscale 20
+	scale 28
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Principe des modèles de 
+\noun on
+Schelling
+\end_layout
+
+\begin_layout Standard
+Idée essentielle : la ségregation est 
+\shape italic
+bottom-up
+\shape default
+, i.
+ e.
+ émergente au sens faible (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "bedau2002downward"
+
+\end_inset
+
+).
+ Les individus veulent satisfaire un certain critère de préférence (fixe
+ ou variable aléatoire) pour la composition de leur voisinage (définition
+ relative à la Moore ou absolue du voisinage), et déménagent en fonction.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+-> Emergence de motifs spatiaux de ségregation par simulation ou calcul
+ analytique
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Remarque : modèle initial définit préférence en fonction de la composition
+ ethnique du voisinage, mais fonctionne avec composition socio-économique
+ (gentrification), en interaction avec un champ spatial, sous contraintes,
+ etc...
+\end_layout
+
+\begin_layout Section
+Description formelle des modèles
+\end_layout
+
+\begin_layout BeginFrame
+Modèles dynamiques de Ségregation
+\end_layout
+
+\begin_layout Standard
+D'après 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "schelling1971dynamic"
+
+\end_inset
+
+, formulation du modèle standard :
+\end_layout
+
+\begin_layout Standard
+temps 
+\begin_inset Formula $t\in\mathbb{N}$
+\end_inset
+
+, 
+\begin_inset Formula $X=(\vec{X}_{i})_{1\leq i\leq N_{X}}\subset\mathcal{S}$
+\end_inset
+
+, lieux de résidence dans système spatial (continu 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+ ou réseau euclidien), 
+\begin_inset Formula $A=(a_{ij})_{i\leq N_{A},j\leq K}$
+\end_inset
+
+ attributs des agents, 
+\begin_inset Formula $R_{t}:A\rightarrow X$
+\end_inset
+
+ localisation spatiale des agents, 
+\begin_inset Formula $U(A,R_{t},X)$
+\end_inset
+
+ fonction d'utilité des agents.
+\end_layout
+
+\begin_layout Standard
+La configuration évolue selon
+\begin_inset Formula 
+\[
+R_{t+1}\in\{F(R_{t},U(A,R_{t},X))|U(A,F(R_{t},U),X)-\vec{C}\succeq0\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+avec 
+\begin_inset Formula $F$
+\end_inset
+
+ correspondance dépendant des choix de modélisation (implémenté via une
+ variable aléatoire sous contraintes)
+\end_layout
+
+\begin_layout BeginFrame
+Résultats Expérimentaux
+\end_layout
+
+\begin_layout Standard
+Simulation numériques d'après 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "schelling1971dynamic"
+
+\end_inset
+
+.
+ Analyse de sensitivité (ex.
+ à la taille du voisinage).
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename images/resultSchelling1.png
+	lyxscale 20
+	scale 50
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename images/resultSchelling2.png
+	lyxscale 20
+	scale 50
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Résultats Analytiques
+\end_layout
+
+\begin_layout Standard
+Tentatives de calculs directs macroscopiques dans le cas de voisinages absolus
+ et de distributions de tolérance uniformes; stabilité des équilibres.
+ Problème : hypothèse d'homogénéité peu raisonnable en sciences sociales
+ ? (sans parler de l'équilibre) Méthodes récentes : 
+\begin_inset Quotes eld
+\end_inset
+
+Equation-free multiscale computations
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "tsoumanis2010equation"
+
+\end_inset
+
+ seraient plus adaptées ?
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename images/eqSchelling1.png
+	lyxscale 20
+	scale 30
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename images/eqSchelling2.png
+	lyxscale 20
+	scale 24
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Résultats Analytiques
+\end_layout
+
+\begin_layout Standard
+Exploration de politiques publiques possibles pour contrer la ségregation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename images/policySchelling.png
+	lyxscale 20
+	scale 45
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename images/policySchelling2.png
+	lyxscale 20
+	scale 36
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Indicateurs de ségregation
+\end_layout
+
+\begin_layout Standard
+Comment mesurer la ségregation ? Différentes définitions, peut mener à des
+ controverses (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "simpson2004statistics"
+
+\end_inset
+
+ vs.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "johnston2005measurement"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Itemize
+Mesures de disparité, entropie spatiale, Index de Moran 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "lenechet:hal-00696445"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Mesure physique par clustering (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "gauvin2009phase"
+
+\end_inset
+
+): 
+\begin_inset Formula $n_{c}$
+\end_inset
+
+ taille des clusters
+\begin_inset Formula 
+\[
+s=\frac{2}{N_{A}^{2}}\sum n_{c}^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Diagramme de phase
+\end_layout
+
+\begin_layout Standard
+Etude du comportement physique du modèle : détermination du diagramme de
+ phase (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "gauvin2009phase"
+
+\end_inset
+
+).
+ Rq : très similaire aux verres de spin.
+ Idée : Formulation stochastique pour le calcul des fonctions de large déviation
+ dans les zones instables ? (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "lecomte2007numerical"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename images/phaseSchelling1.png
+	lyxscale 20
+	scale 17
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename images/phaseSchelling2.png
+	lyxscale 20
+	scale 35
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Extensions et Applications
+\end_layout
+
+\begin_layout BeginFrame
+Extension : Analyse de robustesse
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Comment les formes des fonctions d'utilité individuelles peuvent influencer
+ les motifs de ségregation ?
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Dans 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "pancs2007schelling"
+
+\end_inset
+
+, exploration de différentes formes ; même dans le cas d'une forte préférence
+ pour l'intégration, la ségregation est favorisée (calcul des proportions
+ d'équilibres de Nash aveugles sur de nombreuses répétitions).
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Extension : Comparaison empirique
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Peu de tentatives de calibration ou de constatations empiriques des modèles.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Etude de cas de nombreuses villes américaines et des motifs de parcours
+ résidentiels dans 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "clark1991residential"
+
+\end_inset
+
+ : le modèle serait vérifiables, mais plus sur des variables socio-économiques.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Extension : Influence des régulations
+\end_layout
+
+\begin_layout Standard
+Si les mesures locales ne sont pas efficaces, quid des mesures globales
+ ? Une régulation à la Pigou pourrait diminuer significativement la ségregation
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "wang2013beyond"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename images/pigovian.png
+	lyxscale 20
+	scale 50
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Extension : Sensibilité spatiale
+\end_layout
+
+\begin_layout Standard
+Contrairement aux résultats de 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "fagiolo2007segregation"
+
+\end_inset
+
+ qui ne spatialisent pas le réseau et n'ont pas de sens réel, 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "banos2012network"
+
+\end_inset
+
+ prouve que le modèle est extrêmement sensible à la structure spatiale.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename images/banosSensitivity.png
+	lyxscale 20
+	scale 50
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Application : potentiel de ségregation
+\end_layout
+
+\begin_layout Standard
+Dans 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "raimbault2014Urbanconf"
+
+\end_inset
+
+, modèle de croissance urbaine utilisé pour évaluer des contraintes initiales
+ (plan).
+ Mesure du potentiel de ségregation économique par couplage avec un modèle
+ de dynamique résidentielle (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "benenson1998multi"
+
+\end_inset
+
+) basé sur un modèle de Schelling, utilisant la sensibilité spatiale des
+ structures (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "banos2012network"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /Users/Juste/Documents/Cours/ComplexSystemsMadeSimple/UrbanMorphogenesis/Results/ExtremeConfs/TreeLikeCity.png
+	lyxscale 20
+	scale 21
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /Users/Juste/Documents/ComplexSystems/ProjetUrbanFramework/Models/Raumulus/results/LinkedCenters_eqCoefs_MoreCells.png
+	lyxscale 25
+	scale 16
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /Users/Juste/Documents/ComplexSystems/ProjetUrbanFramework/Models/Raumulus/results/bigWorld-distances.png
+	lyxscale 20
+	scale 19
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Exemple de structures spatiales à évaluer
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Conclusion
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Modèles précurseurs, intéressants théoriquement, analytiquement et experimentale
+ment.
+ Même si difficile à calibrer, modèles de principe pouvant guider l'aide
+ à la décision.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Nombreux développement scientifiques, à la base d'une grande quantité de
+ connaissances.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}[allowframebreaks]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+frametitle{References}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "/Users/Juste/Documents/Cours/TheoreticalAnalysisComplexSystems/Project/Biblio/biblio,/Users/Juste/Documents/Cours/TheoreticalAnalysisComplexSystems/Project/Biblio/TransportationSystemSafety,/Users/Juste/Documents/ComplexSystems/CityBikes/Biblio/bibtex,/Users/Juste/Documents/ComplexSystems/Biblio/Culture/BibTex/culture,/Users/Juste/Documents/ComplexSystems/Biblio/BibTeX/global,/Users/Juste/Documents/Cours/TherapeuticEvaluation/Biblio/bibtex,/Users/Juste/Documents/ComplexSystems/CCUPD/Biblio/ccupd,/Users/Juste/Documents/Cours/TAMUR/Biblio/schelling"
+options "apalike"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Questions
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+\begin_inset space \hfill{}
+\end_inset
+
+?
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\end_body
+\end_document

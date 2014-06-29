@@ -1,0 +1,381 @@
+%% LyX 2.0.5.1 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{beamer}
+\usepackage{mathptmx}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+\newcommand{\noun}[1]{\textsc{#1}}
+%% A simple dot to overcome graphicx limitations
+\newcommand{\lyxdot}{.}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+ % this default might be overridden by plain title style
+ \newcommand\makebeamertitle{\frame{\maketitle}}%
+ \AtBeginDocument{
+   \let\origtableofcontents=\tableofcontents
+   \def\tableofcontents{\@ifnextchar[{\origtableofcontents}{\gobbletableofcontents}}
+   \def\gobbletableofcontents#1{\origtableofcontents}
+ }
+ \long\def\lyxframe#1{\@lyxframe#1\@lyxframestop}%
+ \def\@lyxframe{\@ifnextchar<{\@@lyxframe}{\@@lyxframe<*>}}%
+ \def\@@lyxframe<#1>{\@ifnextchar[{\@@@lyxframe<#1>}{\@@@lyxframe<#1>[]}}
+ \def\@@@lyxframe<#1>[{\@ifnextchar<{\@@@@@lyxframe<#1>[}{\@@@@lyxframe<#1>[<*>][}}
+ \def\@@@@@lyxframe<#1>[#2]{\@ifnextchar[{\@@@@lyxframe<#1>[#2]}{\@@@@lyxframe<#1>[#2][]}}
+ \long\def\@@@@lyxframe<#1>[#2][#3]#4\@lyxframestop#5\lyxframeend{%
+   \frame<#1>[#2][#3]{\frametitle{#4}#5}}
+ \def\lyxframeend{} % In case there is a superfluous frame end
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usetheme{Warsaw}
+%\usetheme{Boadilla}
+% or ...
+
+\usecolortheme{orchid}
+\setbeamertemplate{footline}[text line]{} % makes the footer EMPTY
+
+\setbeamercovered{transparent}
+% or whatever (possibly just delete it)
+
+
+\usepackage{bbm}
+
+\@ifundefined{showcaptionsetup}{}{%
+ \PassOptionsToPackage{caption=false}{subfig}}
+\usepackage{subfig}
+\makeatother
+
+\usepackage{babel}
+\begin{document}
+
+\title{Sur les Modèles de Ségregation de Schelling}
+
+
+\subtitle{Cours TAMUR - Exposé thématique}
+
+
+\author{\noun{Juste Raimbault}}
+
+
+\date{19 mars 2014}
+
+\makebeamertitle
+\AtBeginSection[]{
+
+  \frame<beamer>{ 
+
+    \frametitle{Outline}   
+
+    \tableofcontents[currentsection] 
+
+  }
+
+}
+
+
+\lyxframeend{}\lyxframe{Outline}
+
+\tableofcontents{}
+
+
+\lyxframeend{}\section{Contexte et généralités}
+
+
+\lyxframeend{}\lyxframe{Introduction}
+
+\vfill{}
+
+\begin{itemize}
+\item \noun{T. C. Schelling} : Economiste américain, contributions en Théorie
+des jeux et Sciences Sociales computationelles.
+\end{itemize}
+\vfill{}
+
+\begin{itemize}
+\item Article fondateur : \cite{schelling1969models}, cherche à expliquer
+mathématiquement les phénomènes de ségrégation sociale (très problématiques
+au Etats-Unis).
+\end{itemize}
+\vfill{}
+
+\begin{itemize}
+\item Modèles d'un type particulier, précurseur dans la méthodologie de
+modélisation et de simulation.
+\end{itemize}
+
+\lyxframeend{}\lyxframe{Contexte scientifique : Science des Systèmes Complexes}
+
+\vfill{}
+
+\begin{itemize}
+\item Complexité: notion d'émergence et de \textit{self-organisation}. Précurseurs
+: Cybernétique (\cite{wiener1948cybernetics}) puis Synergétique (\cite{haken1980synergetics}).
+Voir \cite{newman2011complex} pour une revue récente d'une large
+vue du domaine, \cite{chavalarias2009french} pour des enjeux de recherche
+actuels.
+\end{itemize}
+\vfill{}
+
+\begin{itemize}
+\item Application à l'étude des Systèmes Urbains : \noun{J. Jacobs} (\cite{Jac56});
+\noun{Batty }: ``Cities and complexity'' (\cite{Bat07}). Modélisation
+et simulations computationelles en Sciences Sociales : \cite{varenne2010simulations}.
+\end{itemize}
+\vfill{}
+
+\begin{itemize}
+\item Développement rapide aujourd'hui : travaux de physiciens (e. g. \cite{2013arXiv1309.3961L})
+notamment grâce aux nouveau types de données, (\cite{2014arXiv1401.4540L});
+intéractions avec la géographie et sociologie quantitatives (\cite{banos2013HDR});
+``A new science of cities'' ? (\cite{batty2013new}).
+\end{itemize}
+\vfill{}
+
+
+
+\lyxframeend{}\lyxframe{Exemple de simulation multi-agents}
+
+La série des modèles SIMPOP : modèles agent-based pour la simulation
+de la croissance d'un système de villes à échelle continentale (\cite{pumain2012multi}).
+Fig. d'après \cite{bretagnolle2007deux}.
+
+\medskip{}
+
+
+\hfill{}\includegraphics[scale=0.28]{images/simpop}\hfill{}
+
+
+\lyxframeend{}\lyxframe{Principe des modèles de \noun{Schelling}}
+
+Idée essentielle : la ségregation est \textit{bottom-up}, i. e. émergente
+au sens faible (\cite{bedau2002downward}). Les individus veulent
+satisfaire un certain critère de préférence (fixe ou variable aléatoire)
+pour la composition de leur voisinage (définition relative à la Moore
+ou absolue du voisinage), et déménagent en fonction.
+
+\bigskip{}
+
+
+-> Emergence de motifs spatiaux de ségregation par simulation ou calcul
+analytique
+
+\bigskip{}
+
+
+Remarque : modèle initial définit préférence en fonction de la composition
+ethnique du voisinage, mais fonctionne avec composition socio-économique
+(gentrification), en interaction avec un champ spatial, sous contraintes,
+etc...
+
+
+\lyxframeend{}\section{Description formelle des modèles}
+
+
+\lyxframeend{}\lyxframe{Modèles dynamiques de Ségregation}
+
+D'après \cite{schelling1971dynamic}, formulation du modèle standard
+:
+
+temps $t\in\mathbb{N}$, $X=(\vec{X}_{i})_{1\leq i\leq N_{X}}\subset\mathcal{S}$,
+lieux de résidence dans système spatial (continu $\mathbb{R}^{2}$
+ou réseau euclidien), $A=(a_{ij})_{i\leq N_{A},j\leq K}$ attributs
+des agents, $R_{t}:A\rightarrow X$ localisation spatiale des agents,
+$U(A,R_{t},X)$ fonction d'utilité des agents.
+
+La configuration évolue selon
+\[
+R_{t+1}\in\{F(R_{t},U(A,R_{t},X))|F(R_{t},U)-\vec{C}\succeq0\}
+\]
+
+
+avec $F$ correspondance dépendant des choix de modélisation (implémenté
+via une variable aléatoire sous contraintes)
+
+
+\lyxframeend{}\lyxframe{Résultats Expérimentaux}
+
+Simulation numériques d'après \cite{schelling1971dynamic}. Analyse
+de sensitivité (ex. à la taille du voisinage).
+
+\bigskip{}
+
+
+\hfill{}\includegraphics[scale=0.5]{images/resultSchelling1}\hfill{}\includegraphics[scale=0.5]{images/resultSchelling2}\hfill{}
+
+
+\lyxframeend{}\lyxframe{Résultats Analytiques}
+
+Tentatives de calculs directs macroscopiques dans le cas de voisinages
+absolus et de distributions de tolérance uniformes; stabilité des
+équilibres. Problème : hypothèse d'homogénéité peu raisonnable en
+sciences sociales ? (sans parler de l'équilibre) Méthodes récentes
+: ``Equation-free multiscale computations'' \cite{tsoumanis2010equation}
+seraient plus adaptées ?
+
+\medskip{}
+
+
+\hfill{}\includegraphics[scale=0.3]{images/eqSchelling1}\hfill{}\includegraphics[scale=0.24]{images/eqSchelling2}\hfill{}
+
+
+\lyxframeend{}\lyxframe{Résultats Analytiques}
+
+Exploration de politiques publiques possibles pour contrer la ségregation.
+
+\bigskip{}
+
+
+\hfill{}\includegraphics[scale=0.45]{images/policySchelling}\hfill{}\includegraphics[scale=0.36]{images/policySchelling2}\hfill{}
+
+
+\lyxframeend{}\lyxframe{Indicateurs de ségregation}
+
+Comment mesurer la ségregation ? Différentes définitions, peut mener
+à des controverses (\cite{simpson2004statistics} vs. \cite{johnston2005measurement}).
+\begin{itemize}
+\item Mesures de disparité, entropie spatiale, Index de Moran \cite{lenechet:hal-00696445}
+\item Mesure physique par clustering (\cite{gauvin2009phase}): $n_{c}$
+taille des clusters
+\[
+s=\frac{2}{N_{A}^{2}}\sum n_{c}^{2}
+\]
+
+\end{itemize}
+
+\lyxframeend{}\lyxframe{Diagramme de phase}
+
+Etude du comportement physique du modèle : détermination du diagramme
+de phase (\cite{gauvin2009phase}). Rq : très similaire aux verres
+de spin.
+
+\medskip{}
+
+
+\hfill{}\includegraphics[scale=0.17]{images/phaseSchelling1}\hfill{}\includegraphics[scale=0.35]{images/phaseSchelling2}\hfill{}
+
+
+\lyxframeend{}\section{Extensions et Applications}
+
+
+\lyxframeend{}\lyxframe{Extension : Analyse de robustesse}
+
+\vfill{}
+
+\begin{itemize}
+\item Comment les formes des fonctions d'utilité individuelles peuvent influencer
+les motifs de ségregation ?
+\end{itemize}
+\vfill{}
+
+\begin{itemize}
+\item Dans \cite{pancs2007schelling}, exploration de différentes formes
+; même dans le cas d'une forte préférence pour l'intégration, la ségregation
+est favorisée (calcul des proportions d'équilibres de Nash aveugles
+sur de nombreuses répétitions).
+\end{itemize}
+\vfill{}
+
+
+
+\lyxframeend{}\lyxframe{Extension : Comparaison empirique}
+
+\vfill{}
+
+\begin{itemize}
+\item Peu de tentatives de calibration ou de constatations empiriques des
+modèles.
+\end{itemize}
+\vfill{}
+
+\begin{itemize}
+\item Etude de cas de nombreuses villes américaines et des motifs de parcours
+résidentiels dans \cite{clark1991residential} : le modèle serait
+vérifiables, mais plus sur des variables socio-économiques.
+\end{itemize}
+\vfill{}
+
+
+
+\lyxframeend{}\lyxframe{Extension : Influence des régulations}
+
+Si les mesures locales ne sont pas efficaces, quid des mesures globales
+? Une régulation à la Pigou pourrait diminuer significativement la
+ségregation \cite{wang2013beyond}.
+
+\bigskip{}
+
+
+\hfill{}\includegraphics[scale=0.5]{images/pigovian}\hfill{}
+
+
+\lyxframeend{}\lyxframe{Extension : Sensibilité spatiale}
+
+Contrairement aux résultats de \cite{fagiolo2007segregation} qui
+ne spatialisent pas le réseau et n'ont pas de sens réel, \cite{banos2012network}
+prouve que le modèle est extrêmement sensible à la structure spatiale.
+
+\bigskip{}
+
+
+\hfill{}\includegraphics[scale=0.5]{images/banosSensitivity}\hfill{}
+
+
+\lyxframeend{}\lyxframe{Application : potentiel de ségregation}
+
+Dans \cite{raimbault2014Urbanconf}, modèle de croissance urbaine
+utilisé pour évaluer des contraintes initiales (plan). Mesure du potentiel
+de ségregation économique par couplage avec un modèle de dynamique
+résidentielle (\cite{benenson1998multi}) basé sur un modèle de Schelling,
+utilisant la sensibilité spatiale des structures (\cite{banos2012network}).
+
+\begin{figure}
+\hfill{}\subfloat{\includegraphics[scale=0.21]{/Users/Juste/Documents/Cours/ComplexSystemsMadeSimple/UrbanMorphogenesis/Results/ExtremeConfs/TreeLikeCity}}\hfill{}\subfloat{\includegraphics[scale=0.16]{/Users/Juste/Documents/ComplexSystems/ProjetUrbanFramework/Models/Raumulus/results/LinkedCenters_eqCoefs_MoreCells}}\hfill{}\subfloat{\includegraphics[scale=0.19]{/Users/Juste/Documents/ComplexSystems/ProjetUrbanFramework/Models/Raumulus/results/bigWorld-distances}}\hfill{}\caption{Exemple de structures spatiales à évaluer}
+\end{figure}
+
+
+
+\lyxframeend{}\lyxframe{Conclusion}
+
+\vfill{}
+
+\begin{itemize}
+\item Modèles précurseurs, intéressants théoriquement, analytiquement et
+experimentalement. Même si difficile à calibrer, modèles de principe
+pouvant guider l'aide à la décision. 
+\end{itemize}
+\vfill{}
+
+\begin{itemize}
+\item Nombreux développement scientifiques, à la base d'une grande quantité
+de connaissances.
+\end{itemize}
+\vfill{}
+
+
+
+\lyxframeend{}
+
+\begin{frame}[allowframebreaks]
+\frametitle{References}
+
+\bibliographystyle{apalike}
+\bibliography{/Users/Juste/Documents/Cours/TheoreticalAnalysisComplexSystems/Project/Biblio/biblio,/Users/Juste/Documents/Cours/TheoreticalAnalysisComplexSystems/Project/Biblio/TransportationSystemSafety,/Users/Juste/Documents/ComplexSystems/CityBikes/Biblio/bibtex,/Users/Juste/Documents/ComplexSystems/Biblio/Culture/BibTex/culture,/Users/Juste/Documents/ComplexSystems/Biblio/BibTeX/global,/Users/Juste/Documents/Cours/TherapeuticEvaluation/Biblio/bibtex,/Users/Juste/Documents/ComplexSystems/CCUPD/Biblio/ccupd,/Users/Juste/Documents/Cours/TAMUR/Biblio/schelling}
+
+
+\end{frame}
+
+
+\lyxframeend{}\lyxframe{Questions}
+
+{\LARGE \hfill{}?\hfill{}\hfill{}}{\LARGE \par}
+
+
+\lyxframeend{}
+\end{document}

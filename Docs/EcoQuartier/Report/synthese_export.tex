@@ -1,0 +1,1235 @@
+%% LyX 2.0.5.1 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[french]{article}
+\usepackage[latin9]{inputenc}
+\usepackage{geometry}
+\geometry{verbose,tmargin=2.5cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=2.5cm}
+\usepackage{array}
+\usepackage{textcomp}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{esint}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+\newcommand{\noun}[1]{\textsc{#1}}
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{multicol}
+
+\makeatother
+
+\usepackage{babel}
+\makeatletter
+\addto\extrasfrench{%
+   \providecommand{\og}{\leavevmode\flqq~}%
+   \providecommand{\fg}{\ifdim\lastskip>\z@\unskip\fi~\frqq}%
+}
+
+\makeatother
+\begin{document}
+
+\title{Les Eco-quartiers lus par la mobilité : vers une évaluation intégrée}
+
+
+\author{\noun{A. Ali}$^{1}$, \noun{I. Carneiro}$^{1}$, \noun{L. Dussarps}$^{1}$,
+\noun{F. Guédel}$^{1,2}$, \noun{E. Lamy}$^{1,3}$,\noun{}\\
+\noun{J. Raimbault}$^{1,4}$, \noun{L. Viger$^{1}$} \& \noun{V. Cohen$^{1}$\smallskip{}
+}\\
+\textit{sous la direction de}\noun{\smallskip{}
+}\\
+\noun{T. Aw$^{5,6}$} \& \noun{S. Shadegian$^{5}$\smallskip{}
+}\\
+\noun{$^{1}$}Département VET, Ecole Nationale Des Ponts et Chaussées\\
+$^{2}$Ecole Nationale Supérieure des Mines de Nancy\\
+$^{3}$Ecole des Ingénieurs de la Ville de Paris\\
+$^{4}$Graduate School, Ecole Polytechnique\noun{}\\
+\noun{$^{5}$LVMT - UMR-T 9403 IFSTTAR}\\
+\noun{$^{6}$}SETEC International}
+\maketitle
+\begin{abstract}
+Étant donné différentes réalisations d'un même \textquotedblleft{}fait
+urbain\textquotedblright{} \cite{mangin1999projet}, il est souhaitable
+de pouvoir extraire des indicateurs relativement généraux et intégrés
+afin de quantifier de manière objective un système donné sur son niveau
+de performance au regard d'objectifs voulus pour la concrétisation
+de ce fait abstrait. Dans notre cas, le fait urbain observé dont nous
+supposons l'existence est celui relativement récent
+des \textquotedblleft{}eco-quartiers\textquotedblright{}, dont les
+définitions peuvent être assez diverses mais dont le thème général
+reste la conception d'un tissu urbain de manière \textquotedblleft{}intégrée\textquotedblright{}
+(prenant en compte de manière cohérente de multiples objectifs hétérogènes)
+satisfaisant à des critères de développement durable \cite{souami2012ecoquartiers},
+pour lesquels notre évaluation s'est centrée sur les
+questions de mobilité. Notre projet consiste en une analyse de la
+mobilité sur les quartiers particuliers que représentent les écoquartiers,
+et plus spécialement, en une évaluation de son impact sur le bilan
+global de développement durable de ces phénomènes si médiatisés.
+
+\bigskip{}
+\bigskip{}
+\bigskip{}
+
+\end{abstract}
+
+\section{Présentation de la démarche et définition de l'Eco-Quartier}
+
+Avant de commencer, peut-être devons-nous d'abord
+définir ce que nous entendons par mobilité, et plus précisément par
+écomobilité. L'écomoblité, c'est un
+concept assez récent, qui résulte de la prise de conscience de l'impact
+des transports et de la mobilité en général (la mobilité englobant
+l'aspect transport mais aussi l'aspect
+aménagement ainsi que les habitudes de déplacement) sur le bilan environnemental
+global. L'écomoilité c'est donc une
+mobilité respectueuse de l'environnement, économe
+en énergie, faiblement contributrice au réchauffement de la planète,
+participant à un développement soutenable et durable, et améliorant
+la qualité de vie des habitants et usagers. C'est
+de nos jours un enjeu majeur à la fois économique (modèle économique
+viable), d'aménagement (organiser la mobilité autrement)
+et social (bien être, santé publique). En l'occurrence,
+de nos jours l'écomobilité s'attaque
+surtout à la voiture particulière et à la motorisation thermique conventionnelle.
+Sa déclinaison peut être extrêmement diverse et aller de politiques
+d'orientation générales, à l'achat
+de véhicules dits propres. Il n'existe donc pas de
+solution unique ou normative, même s'il peut parfois
+exister des modes. Pour réussir cette analyse nous avons effectué
+une première mise en contexte afin, principalement, de se demander
+ce qu'est un écoquartier. Ceci permettra de déterminer
+ce que nous attendons de la mobilité dans un quartier qualifié de
+durable, quels équipements sont nécessaires, quels comportements sont
+souhaitables, quels résultats sont attendus. Pour trouver la définition
+d'un écoquartier, nous avons lu quelques articles
+critiques sur les écoquartiers. Nous avons également effectué un état
+de l'art qui nous a amené à déterminer les thèmes
+majeurs abordés dans n'importe quel écoquartier et
+les moyens pour les évaluer. En France, nous avons depuis 2012 le
+label Ecoquartier mais d'autres acteurs avaient préalablement
+amorcé la démarche comme l'association HQE avec HQE
+Aménagement, l'AEU de l'ADEME, ou
+@d aménagement durable de la région Ile-de-France. A l'étranger,
+les certifications sont délivrées par LEED ND, BREAM Communities,
+CASBEE Urbain Development, et DGNB, respectivement en Amérique du
+Nord, Angleterre, Japon et Allemagne. L'Europe a également
+développé sont propre référentiel avec RFSC (Reference Framework for
+Europen Sustainable Cities. Depuis quelques années, les référentiels
+se multiplient en même temps que les certifications et labels mais
+parmi ceux cités seul BREAM Communities aborde clairement le thème
+des transports. On regrette que la mobilité ne soit pas plus développé
+dans les autres certifications et labels et certains se contentent
+même d'attester l'efficacité énergétique
+d'un bâtiment. Ce benchmark nous a aussi permis de
+déterminer quelques facteurs de réussite ainsi que certaines causes
+d'échec de mise en place de certains écoquartiers.
+Les facteurs de réussite les plus en lien avec notre sujet sont l'attitude
+« positive » des habitants ainsi que la prise en compte de l'environnement
+dans la conception du quartier. L'attitude des habitants
+par rapport à leur quartier est très souvent en lien avec leur implication
+dès les phases amont du projet. La prise en compte du contexte englobe
+le fait de penser l'écoquartier dans son environnement
+et pas comme un quartier fermé, et ce autant pour les formes urbaines
+que pour la mixité fonctionnelle et la desserte en transports. C'est
+ce qu'on pourrait appeler une vision intégrée de l'écoquartier.
+
+A partir des analyses menées, nous avons abouti à certaines possibilités
+de perception de ce qu'est un écoquartier. De la vision
+la plus négative à la plus positive, les plus sceptiques qualifieront
+ces quartiers de poudre aux yeux, d'apparences et
+de façades, reportant les problèmes sur les quartiers voisins et communiquant
+uniquement sur certains points sur lesquels des efforts ont été faits
+en occultant massivement des points beaucoup moins roses (ou verts
+dans le cas d'un écoquartier). D'autres
+diront que, même si les plus grands efforts actuellement possibles
+sont faits dans ces quartiers, ils continueront à être une goutte
+d'eau dans l'océan du parc immobilier
+et les fonds investis dans la qualité socio-environnementale de ces
+quartiers sont totalement démesurés face à leur influence à l'échelle
+macroscopique d'un Etat par exemple voire du monde.
+D'autres encore voient ces quartiers comme un prétexte,
+une forme de couverture pour l'extension urbaine.
+Ceci s'applique bien sûr uniquement aux quartiers
+qui sont faits en prolongement voire en marge de l'urbanisation
+existante. Une manière positive de voir les écoquartiers et d'intégrer
+le fait que ces quartiers concentrent souvent de nombreuses technologies
+et de les voir comme des incubateurs pour l'innovation,
+des quartiers où peuvent s'appliquer, grandeur nature,
+des méthodes innovantes de gestion des eaux et des déchets, des moyens
+alternatifs de fabriquer de l'énergie ou encore des
+structures permettant de mettre en commun les moyens. Cette manière
+de voir les écoquartiers en fait des sortes de laboratoires. Enfin,
+les plus optimistes verront dans ces quartiers l'avenir
+de la ville, une forme d'habitat qui va progressivement
+remplacer, au fur et à mesure des renouvellements urbains, la ville
+telle qu'elle existe aujourd'hui.
+
+Pour revenir à une vision plus objective qui tire son essence de notre
+étude bibliographique ainsi que de toutes ces visions subjectives,
+on pourrait définir l'écoquartier comme un quartier
+offrant un milieu de vie agréable aux gens qui le fréquentent (habitants,
+travailleurs, visiteurs occasionnels) et dont les impacts sur son
+environnement sont connus, ont été étudiés et optimisés. Cette définition,
+volontairement très générale est faite pour donner un axe autour duquel
+l'aménageur doit développer ses propres propositions
+. La définition donnée à un écoquartier dépendra bien sûr de l'acteur
+qui cherche à le définir. Pour le concepteur, ce sera un quartier
+conçu de telle manière que les usagers se voient remettre un quartier
+où ils peuvent agir selon le maximum de leur capacité et de leur volonté
+pour respecter les conceptions actuelles de durabilité. Il peut être
+admis que les écoquartiers soient la manifestation urbaine du développement
+durable. Or celui-ci est par essence ce qu'on pourrait
+appeler un paradigme mou, c'est-à-dire qu'il
+est très ouvert, non défini, afin qu'il puisse évoluer
+et permettre l'innovation. Ainsi, les écoquartiers
+ne sont donc, de par leur origine, pas définis. Frank Faucheux, en
+charge du dossier écoquartier au ministère de l'Egalité
+des Territoires et du Logement, dit à ce propos : « Dites-moi où vous
+êtes et je vous dirai comment doit être votre écoquartier. » \cite{faucheux}.
+Par cette phrase il exprime le fait qu'un bon écoquartier
+dans le contexte A ne sera pas forcément un bon écoquartier dans le
+contexte B mais souligne également un manque de transparence quant
+à l'attribution du label Ecoquartier.
+
+Depuis le lancement en 2012 du label, par le ministère de l'Egalité
+des Territoires et du Logements, 45 opérations ont été labellisées
+en 2013 et une deuxième vague de labellisation est en cours. La procédure
+pour les collectivités est assez simple, puisque celles-ci ont justes
+dans un premier temps, à s'engager à respecter 20
+engagements non chiffrés, parmi lesquels, un seul de ces engagements
+concerne la mobilité : « privilégier les mobilités douces et le transport
+collectif pour réduire la dépendance à l'automobile
+». La seconde étape consiste à remplir un dossier qui comprend 3 parties.
+Tout d'abord, la collectivité renseigne des informations
+sur son contexte en fournissant des données objectives sur son territoire
+et sur le montage de l'opération afin que celui-ci
+soit pris en compte dans l'analyse du projet sans
+être un frein au développement d'un écoquartier. La
+collectivité remplit également un tableau de 20 données chiffrées
+liées aux 20 engagements précédant. Etant donné qu'un
+seul engagement concerne la mobilité, il n'existe
+dans le dossier de labellisation qu'un seul critère
+lié : \textquotedblleft{}Quel est le nombre de logements situés à
+moins de 500 mètres d'un arrêt de transports en commun?\textquotedblright{}.
+Dans la seconde partie, la collectivité à la possibilité de présenter
+son projet sur une page avec comme intitulé \textquotedblleft{}24
+heures dans la vie d'un habitant de mon écoquartier.\textquotedblright{}
+Enfin, dans la troisième partie, la collectivité doit répondre de
+manière synthétique jusqu'à 6 questions en fonction
+du thème. Dans tous les domaines, dont celui de la mobilité, les questions
+étant assez ouvertes, pour exemple \textquotedblleft{}En quoi l'aménagement
+du quartier favorise-t-il les déplacements en modes actifs (piétons,
+vélos, patinettes...) au sein du quartier et vers les quartiers adjacents?\textquotedblright{}.
+Les réponses des équipes en charge du projet peuvent donc être assez
+disparates. L'ensemble du dossier est ensuite évalué
+par 3 experts, un local, un national et un extérieur à la fonction
+publique et une partie de l'évaluation consiste à
+attribuer jusqu'à 3 étoiles sur la base de réponses
+ouvertes. Au final, le document est concis, clair et facilement compréhensible
+par les collectivités mais avec seulement 20 indicateurs chiffrés
+relativement simples, et la notation subjective par des experts, l'évaluation
+est loin d'être transparente ni suffisante en particulier
+pour la mobilité.
+
+Dans ce contexte d'écoquartier, on peut alors se demander
+quelle est la place de la mobilité dans la construction actuelle des
+écoquartiers. Mais on peut également se demander, au vu des travaux
+effectués par la communauté scientifique, quelle est la place que
+les écoquartiers devraient avoir dans leur conception ainsi que dans
+leur évaluation ? La mobilité comprend d'abord un
+enjeu environnemental évident à savoir les émissions de CO2 liés aux
+transports. Tendre vers une mobilité durable, c'est
+limiter les émissions de gaz à effet de serre. Prendre en compte la
+mobilité dans un projet de quartier durable, c'est
+aussi limiter les temps de déplacements contraints pour permettre
+aux habitants plus de loisirs, plus de sorties, plus d'activités
+pour les enfants, plus de temps pour soi, moins de stress. En fait,
+le poste de la mobilité existe déjà dans toutes les évaluations mais
+il parait souvent sommaire en ne considérant que la desserte par les
+transports collectifs ou non de l'écoquartier. De
+plus, ce thème est lié avec d'autres postes d'évaluation
+des écoquartiers comme la qualité de l'air, la diversité
+des fonctions, la lutte contre l'étalement urbain,
+l'épanouissement des résidents. C'est
+à partir de ces postes, du benchmark et de notre propre analyse que
+nous avons développé une grille d'évaluation de la
+mobilité dans les écoquartiers.
+
+
+\section{Définition de notre référentiel d'évaluation}
+
+Abordons maintenant la démarche d'établissement du
+référentiel d'évaluation. Nous commencerons par en
+rappeler l'intérêt dans le cadre de notre problématique.
+Ensuite, le lecteur pourra, pas à pas, en suivre les différentes étapes
+: nous expliquerons, pour dévoiler les concepts sous-jacents, mieux
+comprendre les idées latentes et transverses, les diverses phases
+qui ont abouti à la grille terminale \textendash{} partant du principe
+qu'un tableau illustratif sera plus explicite qu'un
+long raisonnement théorique.
+
+
+\subsection{Une évaluation par indicateurs}
+
+Au premier plan du fil du récit s'installe la problématique
+: la commande dicte sa volonté - étudier comment un quartier peut-être
+éco-conçu en matière de mobilité, tout en ajustant les moyens de mobilité
+aux fonctions urbaines associées au quartier ?-, nous voulons en approcher
+sa cause. Le mouvement premier résulte, on l'a vu,
+d'une certaine défiance contre l'appareil
+productif des écoquartiers qui se drape de verdoyantes et fleurissantes
+raisons, s'entoure \textendash{} s'accapare?-
+de la légitimité écologique. Le second mouvement, répondant et prolongeant
+le premier, est alors celui de raison et sagesse : rendons objectif
+une analyse critique de la durabilité. Et la première humeur ayant
+encore ses effets, plaçons nous sous un angle d'attaque
+favorable aux intuitions : concentrons nos efforts sur la mobilité
+qui d'abord semble un point faible dans la défense
+des écoquartiers. Ceci posé, l'interrogation se porte
+sur l'objectivation de l'analyse :
+quels moyens permettront de rendre l'examen impartial,
+de quels matériaux l'observation devra-telle se composer
+pour être juste et équitable. Les façons d'approcher
+les réalités de la ville sont nombreuses et variées, d'esthétique
+à politique jusqu'à la rationalité scientifique. Nous
+préférons pour ce devoir la dernière, et décidons une approche chiffrée
+par l'intermédiaire d'indicateurs.
+Ceux-ci en effet se basent sur des faits vrais, palpables et concrets.
+Certes le lecteur pourra contester et reprocher la manipulation facile,
+la dimension subjective d'une sélection des chiffres
+parmi l'ensemble des choses mesurables. Nous répondons
+qu'à notre goût une telle démarche permettant au contraire
+de souligner ces choix subjectifs se rapproche proprement d'une
+méthode scientifique, qui laisse apparent ses présupposés et rend
+son discours réfutable. Car les indicateurs ont la vertu de la clarté,
+et ne rejette pas l'évaluation, leurs présupposés
+sous des dires d'experts. Les contestations seront
+donc bienvenues, s'intégrant absolument dans la méthode
+critique, dont un des objectifs tend à la publicité, à la réflexion
+collective et à la transparence contre la méthode du secret et du
+dogme. Il est vrai que la construction de notre grille d'indicateurs,
+résulte également d'un choix biaisé de données mais
+nous souhaitons souligner que pour le choix de ces données nous avons
+fait abstraction de savoir si les données étaient disponibles ou pas.
+
+
+\subsection{Évolution de la démarche}
+
+Le projet débuta en avril de la présente année. Nous en présentons
+les phases de conception afin que le lecteur puisse en saisir les
+directions, et bien percevoir les difficultés surmontées. L'épisode
+de la revue bibliographique a été conté; l'histoire
+se poursuit maintenant par le regroupement, la mise en action et en
+idée des indicateurs rencontrés : il faut les englober au sein d'une
+grille qui, par diverses mécaniques, les mettent en relation, leur
+donnent un sens collectif, imprime un mouvement global. Deux réflexions
+parallèles furent menés, dont les intentions aboutirent à deux grilles
+sinon antagonistes au moins différentes. La conciliation fut trouvée
+dans l'émergence d'une troisième grille,
+fille des deux premières. 
+
+La première grille utilisait le pouvoir comparatif et quantitatif
+des indicateurs. Chaque indicateur devait mesurer une réalité physique
+du quartier (par exemple le ratio elle-même relié à un enjeu (préservation
+des énergies) et à un thème (nouvelles mobilités); chaque indicateur
+aboutissait à une note, la finalité étant de permettre une évaluation
+radar. Par cette méthode, la comparaison entre quartiers devenait
+simple. Mais comme toutes choses, elle avait ses inconvénients dont,
+l'ambigüité voire la partialité des relations entre
+indicateurs et effets physiques, la difficulté de l'établissement
+d'une note.
+
+La seconde grille adoptait une pensée inverse : elle voulait prendre
+l'écoquartier dans son aspect subjectif, et considérer
+non les effets physiques mais la cohérence du discours tenu sur celui-ci.
+Avec les mêmes indicateurs mais par des engrenages différents \textendash{}
+chaque indicateur par comparaison d'une valeur seuil
+était ramené à une réponse vrai/faux selon que le projet tenait compte
+ou non du critère; la valeur seuil était fixée de manière lâche -,
+elle fondait l'évaluation sur un entonnoir thématique
+: dans une liste de quatre thèmes, l'écoquartier pouvait
+prétendre à la certification de l'un des thèmes à
+condition d'avoir validé le thème inférieure. Cette
+méthode permettait donc une évaluation des directions du projet sans
+être trop restrictive sur les solutions envisagés ni trop normative
+sur les conceptions de l'écoquartier; le système de
+validation successive avait cependant le net défaut d'un
+manque complet de souplesse et rejeter à tort certains quartiers.
+
+Une troisième grille se révéla donc nécessaire, elle devait garder
+les mécanismes de la première et l'esprit de la seconde,
+redécoupant les indicateurs selon quatre temporalité : le lecteur
+est invité à lire la partie suivante pour en connaître la substance.
+
+
+\subsection{Présentation du référentiel}
+
+Conformément à la démarche explicitée ci-dessus, nous avons en définitive
+produit une grille unifiée d'indicateurs, que nous
+appellerons notre référentiel d'évaluation. Si les
+objectifs d'éco-mobilité constituent un prisme majeur
+de lecture de la grille, ils sont néanmoins répartis selon un second
+prisme, à un niveau plus fondamental, selon que l'indicateur
+relève du contexte du quartier, de la planification, ou de l'usage
+qui en est fait. En effet, la mise en place d'un système
+de mobilité et sa durabilité relève principalement de l'aménageur
+au sens large, mais également de la situation dans laquelle se trouve
+effectivement le quartier, ainsi que de l'utilisation
+particulière qu'en font les usagers. Ce découpage
+correspond également aux trois temps de la vie d'un
+projet urbain. Nous avons ainsi établi 8 objectifs, ventilés en 34
+sous-objectifs, apportant une précision supplémentaire, et étant mesuré
+par un indicateur. Pour s'assurer de la pertinence
+de notre découpage et en particulier de son équilibre, chaque sous-objectif
+se rapporte à un jeu d'enjeux de développement durables.
+En ce qui concerne l'indicateur spécifiquement associé
+à un sous-objectif, nous nous sommes évertués à sélectionner celui,
+parmi les possibles, qui représentait le mieux le phénomène souhaité,
+tout en étant comparable, et bien entendu, pas trop difficile à calculer
+d'un point de vue de l'accès aux données.
+Nous verrons par la suite que la récolte des données ne s'est
+pas faite aussi simplement que prévu. Ce qui ressort à première vue
+de notre grille est une relative grande représentation des données
+facilement chiffrables et accessibles, telles le stationnement par
+exemple. Les variables booléennes, exprimant un état de fait, ont
+pour la plupart été remplacées au profit de variables chiffrables
+dans une volonté d'évaluation précise. Cependant,
+on a pu dans ce processus perdre un peu en significativité sur certains
+indicateurs. De plus, certains phénomènes plus difficilement chiffrables
+ou accessibles semblent manquer de cette grille. Le cas le plus frappant
+est peut-être le cas du transport de fret à destination du quartier,
+intégré au début puis abandonné faute de données. Et pourtant des
+initiatives telles que la livraison des magasins de centre-ville par
+des véhicules électriques existent déjà et ont vraisemblablement un
+impact environnemental positif. 
+
+Maintenant, on peut légitimement se demander en quoi notre référentiel
+se démarque des autres référentiels existants, ce à quoi on peut répondre
+en plusieurs points. Le référentiel du dossier de labellisation EcoQuartier
+ne constitue qu'une partie de celui-ci et est présenté
+comme un moyen d'information plutôt que d'évaluation.
+La mobilité est explicitement évoquée comme étant très contextuelle,
+difficile à mesurer et relevant d'initiatives locales.
+Notre référentiel a la prétention de parvenir à donner une image quantitative
+du quartier le décrivant assez fidèlement, même si comme nous l'avons
+évoqué, notre référentiel recèle une certaine part de subjectivité.
+La mobilité n'est d'ailleurs pas considérée
+dans le label comme un chapitre à part entière, mais comme une sous-catégorie,
+à laquelle sont associés seulement deux indicateurs chiffrés et un
+indicateur noté. Même si cela peut relever d'un choix
+axé sur le développement du projet dans son ensemble, notre référentiel
+permet d'apporter plus de détail sur le poste mobilité
+et de chiffrer celui-ci précisément. Par ailleurs, le modèle INDI-RU
+2005 (HQE\texttwosuperior{}R3), que nous avons pu croiser lors de
+l'élaboration de notre grille s'attaque
+également à l'évaluation par indicateurs des projets
+de renouvellement urbains au regard du développement urbain, mais
+pas spécifiquement aux écoquartiers. Seule une cible, sur les 21 que
+comporte le modèle, traite du problème de la mobilité, et une fois
+encore sous le seul angle des cheminements alternatifs. Même si des
+éléments impactant la mobilité sont évoqués dans d'autres
+catégories, telle la densité humaine, le fait qu'ils
+ne soient pas rattachés à la mobilité nuit à la perception que l'on
+peut avoir sur l'importance de poste. Et en cela,
+notre référentiel apporte des éléments de rationalisation, puisqu'il
+intègre les différents éléments ayant traits à la mobilité et pouvant
+avoir une influence dessus.
+
+
+\subsection{Méthode d'exploitation}
+
+Nous disposons donc in fine d'une grille unifiée d'indicateurs
+constituant un référentiel d'évaluation du système
+de mobilité d'un écoquartier, et nous sommes donc
+prêts à la mettre en application. Comme nous l'évoquions
+précédemment, notre méthode d'évaluation a connu des
+évolutions tenant compte de notre appréhension du projet et des ressources
+disponibles. Si dans un premier temps, une évaluation absolue de type
+radar par rapport à des valeurs de référence était envisagée, la non-disponibilité
+nous a amené à reconsidérer la chose. Le référentiel final permet
+donc finalement deux approches issues de nos réflexions antérieures.
+La première est celle d'une comparaison entre quartiers,
+consistant à comparer les valeurs pour chaque sous-objectif et donc
+objectif, quitte à pondérer différemment l'importance
+de chaque indicateur, comme nous le verrons dans la partie simulation.
+Cette méthode permet donc, sinon de classifier, du moins de situer
+un quartier dans le champ des écoquartiers durables. La seconde approche
+consiste en une évaluation par temporalité. Le premier temps du projet
+permet de prendre en compte les déterminants locaux du contexte qui
+ne sont pas gouvernés par la collectivité mais qui impacteront fortement
+la conception et le potentiel durable du projet compte tenu de son
+positionnement dans l'espace de la ville. Vient ensuite
+l'étude de la partie de planification et de formulation
+de l'offre avec les apports de l'écoquartier
+en terme de mobilité éco-conçue. Puis, l'étude de
+l'usage que les habitants font du quartier achève
+l'évaluation, en constatant si l'usage
+est conforme à la planification.
+
+
+\section{Mise en application et comparaison}
+
+Le référentiel doit maintenant être soumis à différents cas d'étude
+pour pouvoir valider son opérabilité. Un diagnostic précis sur les
+cas étudiés doit être fait pour, d'une part, s'assurer
+leur pertinence vis-à-vis du modèle, et d'autre part,
+connaître leurs caractéristiques de mobilité actuelles, afin qu'elles
+soient prises en compte par notre référentiel comme état initial,
+pour les zones non réalisées et comme état final pour les zones développées.
+
+
+\subsection{Présentation générale des éco-quartiers d'étude}
+
+Pour mettre en ½uvre notre référentiel, nous avons choisi de l'appliquer
+sur deux « écoquartiers » dont nous étudierons les performances de
+mobilité durable. Ces quartiers sont la Cité Descartes et le Sycomore.
+Nous les avons choisis car ils ont deux profils fondamentalement différents.
+La Cité Descartes est, pour la plus grande partie, déjà constitué,
+et contient principalement des zones d'enseignement
+et de recherche. La zone de Sycomore est une zone encore non construite
+qui est vouée à accueillir principalement des logements. Tester la
+compatibilité de notre référentiel à ces deux cas se relève donc,
+à priori, intéressant.
+
+
+\paragraph{Cité Descartes}
+
+Créée en 1983, la Cité Descartes se situe sur la commune de Champs-sur-Marne,
+au c½ur de la ville nouvelle de Marne la Vallée. Pôle principal de
+recherche et d'enseignement de l'Est
+Parisien, le campus regroupe près de 20000 étudiants, 3000 enseignants,
+chercheurs et ingénieurs réunies au sein des universités , grandes
+écoles et laboratoires de recherche qui se partagent les 123 hectares
+que couvre le campus et 3500 salariés travaillant dans l'une
+des 350 sociétés. Son objectif est de pouvoir concentrer les universités,
+les entreprises et les services publics locaux afin de créer un pôle
+d'excellence au rayonnement mondial. Un développement
+de près de 840 000 m\texttwosuperior{} est encore prévu. Il devrait
+contenir des bureaux, des logements des commerces et des équipements
+publics.
+
+Souvent présenté comme un quartier à très faible empreinte carbone
+en raison de la multitude de ses bâtiments à énergie positive, il
+n'est cependant jamais officiellement désigné sous
+le terme d'écoquartier. Le quartier ne serait donc
+qu'une vitrine d'exposition du savoir-faire
+éco-technologique, visant à promouvoir une réflexion entre les différents
+organismes locaux concernant la ville durable. Notre évaluation nous
+permettra de déterminer si la Cité Descartes peut être qualifiée d'éco
+quartier d'un point de vue de la mobilité, au-delà
+de l'image de ville durable qu'elle
+renvoie. 
+
+
+\paragraph{Sycomore}
+
+Situé à l'Est de la commune de Bussy Saint-Georges,
+également à Marne la Vallée, le projet de Sycomore n'est
+pas encore réalisé. Il prévoit l'installation sur
+ses 120 hectares de 4500 logements, 3500 m\texttwosuperior{} de commerces,
+40000 m\texttwosuperior{} d'équipements publics et
+25 hectares d'espaces verts. La présence d'un
+grand parc centrale traduit la volonté d'intégrer
+le quartier dans la ville mais aussi en harmonie avec les espaces
+verts environnent. Le plan de déplacement à également prévu de réaliser
+des aménagements visant à réduire de 36\% l'impact
+carbone lié aux transports. Ce projet est donc, contrairement à la
+Cité Descartes, vendu comme un réel écoquartier présentant des engagements
+précis et quantifiés en termes de durabilité de la ville.
+
+Afin de décrire les contextes urbains autour desquels les deux sites
+sont implantés, nous proposons d'étudier les communes
+de Champs-sur-Marne et de Bussy Saint-Georges. La commune de Champs-sur-Marne
+bénéficie d'un réseau de transport structurant important,
+permettant de relier la ville à Paris via l'autoroute
+A4 ou grâce à la ligne du RER A. La station du RER A est également
+le lieu de passage de 4 lignes de bus et d'un Noctilien
+qui relie la ville à ses alentours. La place des transports en commun
+dans la ville est relativement importante puisque près de 40\% des
+déplacements y sont effectués en TC (contre 50\% en voiture en période
+de pointe). Le pourcentage des résidents travaillant dans la commune
+est faible (15\%); C'est un des éléments déterminant
+dans la quantité de déplacement réalisés dans la zone. Cela est principalement
+dû à une dissymétrie entre les catégories socio-professionnelles présentes
+dans la ville et les types d'emplois qui y sont proposés.
+En effet, une forte part des emplois créée par la Cité Descartes est
+destinée à des cadres non-résidents.
+
+La Cité Descartes a pour le moment plutôt contribué à accroître les
+besoins de liaisons de la commune. Bien qu'une part
+importante des déplacements soit réalisée en TC, les besoins en transports
+restent importants en raison des caractéristiques intrinsèques de
+la ville. La ville de Bussy Saint-Georges est la commune de Marne
+la Vallée ayant le plus fort taux de croissance dans ces 10 dernières
+années. Elle bénéficie d'un réseau de transport similaire
+à Champs-sur-Marne, avec un accès direct à l'A4 et
+au RER A. Le quartier de sycomore se situe à 1 km de la gare. Un projet
+d'implantation de gare RER dans la zone est également
+à l'étude. La part des TC est également assez importante
+(45\% contre 49\% pour les VP en période de pointe). Seulement 11,7\%
+des habitants travaillent dans la commune. Ici encore, l'équilibre
+entre actifs résidents et emplois offerts localement peut être remis
+en cause. La ville possède trop peu d'emploi (ratio
+emploi/ actifs de 0,56), généralement incompatibles avec les professions
+et catégories socioprofessionnelles des habitants. L'écoquartier
+de Sycomore est dans une situation idéale du point de vue de l'accessibilité
+aux TC, malgré des pratiques de mobilité peu compatibles avec la notion
+d'éco-mobilité. Notre évaluation nous permettra de
+déterminer si l'implantation de l'écoquartier
+est susceptible d'encourager l'émergence
+de nouvelles pratiques de mobilité. 
+
+
+\subsection{Comparaison des habitudes de mobilité (EGT)}
+
+L'étude des projets d'écoquartiers
+requiert une bonne connaissance des pratiques actuelles en matière
+de mobilité dans les communes d'étude que sont Champs-sur-Marne
+et Bussy-Saint Georges. La grille d'indicateurs renseignés
+est un premier moyen de positionner les performances de chacune de
+ces zones, mais cette méthode ne se suffit pas à elle seule. En effet,
+ces deux villes présentent la spécificité d'appartenir
+à la ville nouvelle de Marne-la-Vallée. Il convient par conséquent
+de dresser un bilan à l'échelle de cette division
+administrative historique sur les pratiques des habitants en matière
+de mobilité, et de les relativiser avec celles observées dans deux
+autres villes nouvelles comparables : Cergy-Pontoise et Evry.
+
+A leur conception dans les années 1960, les villes nouvelles étaient
+supposées proposer un nouveau modèle de mobilité durable, avec des
+transports en commun très développés, à l'image des
+RER. Nous montrons dans cette partie que le bilan est mitigé de ce
+point de vue. L'usage de la voiture s'apparente
+en effet plus à un comportement de Grande Couronne que de proche banlieue
+parisienne, et ce à différents égards (taux de motorisation, part
+modale de la voiture pour tous types de motifs, etc.).
+
+Une telle conclusion amène à reconsidérer certains dogmes qui avaient
+été érigés lors du premier schéma directeur de 1965 de la région Ile-de-France,
+parmi lesquels figure l'inopérance du RER à résoudre
+toutes les demandes en transport en commun. Ce point renforce la nécessité
+de développer les modes de liaisons douces et les réseaux TC secondaires
+mais aussi de considérer plus généralement les interactions entre
+l'occupation des sols et les transports pour favoriser
+l'éco-mobilité.
+
+
+\subsection{Extraction des données et nos hypothèses}
+
+La mise en application de notre grille d'évaluation
+passe ensuite par la récolte intensive de données de types et d'origines
+divers, et c'est l'étape que nous
+nous proposons de développer maintenant. Nous avons à notre disposition
+les données classiques de l'INSEE, mais également
+les bases de données raffinées de l'Enquête Globale
+Transport 2010 par l'intermédiaire de M. Aw, ainsi
+que certains documents des aménageurs de nos écoquartiers de choix,
+hélas trop généraux et agrégés. Partant de ce constat, nous avons
+quelque peu dû changer d'approche quant à notre évaluation,
+en ne prétendant plus comparer exhaustivement les écoquartiers, mais
+plutôt en évaluant à la fois la robustesse de notre évaluation, et
+en jaugeant l'effort réalisé lors de la conception.
+Certains indicateurs étaient ainsi directement calculables à partir
+de données à portée, mais pour d'autres, nous avons
+dû, en partant d'une valeur de base régionale ou à
+l'échelle de Marne-la-Vallée, faire des hypothèses
+sur la position de nos écoquartiers par rapport à cette référence.
+Une phase de scénarisation sera donc ensuite nécessaire afin de voir
+l'impact d'une modification marginale
+de ces indicateurs sur le bilan de l'écoquartier.
+
+
+\subsection{Evaluation et critiques}
+
+Avant de passer à l'évaluation critique des quartiers
+de notre étude, attardons-nous un instant sur le bilan que l'on
+peut tirer de l'application du référentiel aux quartiers.
+Tout d'abord, on peut noter un certain décalage entre
+les données micro que requérait manifestement notre grille, et les
+données macro voire extrapolée avec laquelle nous l'avons
+finalement nourri, décalage qui nuit quelque peu à la portée du résultat
+de son exploitation. En effet, notre étude place la mobilité au centre
+de l'évaluation et demande donc un nombre conséquent
+de données, pas forcément accessibles pour tout le monde, mais pour
+les quartiers, la mobilité n'est qu'un
+poste parmi d'autres, d'où la difficulté
+d'obtenir le niveau de détail souhaité. D'autre
+part, l'application de notre référentiel a permis
+de se rendre compte de la relativement grande importance donnée à
+la mobilité dans les écoquartiers, en fouillant un peu. En effet,
+même si cela peut paraître moins médiatique que des bâtiments à hautes
+qualités architecturale et environnemental, c'est
+néanmoins pris au sérieux. En revanche, notre référentiel révèle également
+que les pratiques pour viser l'éco-mobilité sont souvent
+centrées sur certains postes en particulier, comme par exemple l'absence
+de voiture dans le quartier, ou la priorité accordée aux modes doux.
+
+Une fois les données rassemblées pour nos deux écoquartiers selon
+la méthodologie expliquée ci-dessus, nous pouvons tout d'abord
+procéder à une évaluation qualitative selon les approches évoquées
+précédemment. Tout d'abord, dans une comparaison simple
+entre les deux quartiers, on constate ce qui apparaît clairement sur
+le terrain, à savoir que le système de mobilité de Sycomore est mieux
+conçue en termes de développement durable que celui de la Cité Descartes,
+même s'il convient de modérer cette remarque, les
+fonctions spatiales de Sycomore et de la Cité Descartes étant opposées.
+En particulier, si l'écoquartier labellisé s'attaque
+franchement à l'objectif de décourager le recours
+à la voiture particulière, c'est clairement moins
+le cas de la Cité Descartes, même si le contexte joue un rôle important
+dans ces décisions. En revanche, les deux quartiers tendent à se valoir
+quant à l'objectif de renforcement de l'utilisation
+des transports en commun. A ceci près qu'au regard
+des migrations pendulaires, la Cité Descartes n'ayant
+pas suffisamment de logement étudiant (850 logements répartis sur
+6 résidences pour 20 000 étudiants), et n'attirant
+pas davantage les cadres, elle favorise implicitement un flux quotidien
+élevé de déplacements, ce qui n'est pas fondamentalement
+durable. L'annexe A présente plus en détail cette
+première analyse. Ensuite, l'approche par temporalité,
+elle, est relativement moins parlante puisque Sycomore n'ayant
+pas encore été investi et apprivoisé par des habitants, l'étude
+d'usage ne peut se faire. En ce qui concerne le contexte,
+il a manifestement été pris en compte pour les deux quartiers, mais
+la planification dans le but d'une éco-mobilité semble
+manifestement meilleur à Sycomore. En outre, en utilisant la comparaison
+faite ici entre ce qui se revendique un vrai écoquartier et un quartier
+engagé vers un développement éco-responsable, on peut d'une
+certaine manière à la fois mesurer le chemin restant à parcourir pour
+le quartier en retard, mais aussi mesurer l'effort
+accompli par l'écoquartier. En effet, les indicateurs
+peuvent pointer les écarts entre les quartiers (à ce titre plus la
+grille sera employé et plus le nombre de quartiers renseignés et évalués
+sera important, plus la pertinence de la grille s'accentuera)
+et au moyen d'une scénarisation, on peut évaluer la
+modification induite sur la mobilité par l'obtention
+d'un meilleur ratio.
+
+Cependant, avant d'aborder cette question plus en
+détail, on peut s'intéresser à la robustesse de notre
+grille et à l'importance respective des différents
+indicateurs dans celle-ci.
+
+
+\section{Vers une évaluation de la robustesse d'une caractérisation
+intégrée du \textquotedblleft{}Fait Urbain\textquotedblright{} : Application
+des méthodes d'approximation d'intégrales}
+
+
+\subsection{Présentation et formalisation}
+
+
+\paragraph{Présentation}
+
+Un élément essentiel pour la quantification d'un phénomène
+est une estimation de la robustesse (statistique et selon d'autres
+critères que nous définirons par la suite) de l'évaluation,
+afin d'être en mesure d'affirmer que
+la caractérisation sera reproductible sous les mêmes conditions et
+n'est pas une aberration statistique par exemple.
+Nous proposons une méthode innovante d'évaluation
+de la robustesse, se basant sur des résultats mathématiques liés à
+l'approximation statistique d'intégrale
+et sur des méthodes classiques d'analyse multicritères.
+
+
+\paragraph{Formalisation}
+
+On se donne un nombre fini $(S_{i})_{1\leq i\leq N}$ de systèmes
+territoriaux disjoints (les ``éco-quartiers'') représentés par des
+jeux de données et des indicateurs intermédiaires :
+\[
+S_{i}=(\mathbf{X}_{i},\mathbf{Y}_{i})\in\mathcal{X}_{i}\times\mathcal{Y}_{i}
+\]
+
+
+Avec $\mathcal{X}_{i}=\prod_{k}\mathcal{X}_{i,k}$ et $\mathcal{X}_{i,k}=\mathbb{R}^{n_{i,k}^{X}p_{i,k}^{X}}$
+(idem pour les $\mathcal{Y}_{i}$) et $I_{X}(i,k)$ (resp. $I_{Y}(i,k)$)
+fonction de désignation du type de variable (resp. de l'indicateur)
+
+On distingue les ``données brutes'' $\mathbf{X}_{i}$ à partir desquelles
+sont calculées des indicateurs via des fonctions explicites, des ``indicateurs''
+$\mathbf{Y}_{i}$ qui pourront déjà être sorties de modèles élaborées,
+en général calculés via des modèles agents représentant un aspect
+du système territorial.
+
+On définit l'espace partiel caractéristique du fait urbain est 
+\begin{eqnarray*}
+ & (\mathcal{X},\mathcal{Y})\underset{def}{=}(\prod\tilde{\mathcal{X}}_{c})\times(\prod\tilde{\mathcal{Y}}_{c}) & =(\prod_{\mathcal{X}_{i,k}\in\mathcal{D}_{\mathcal{X}}}\mathbb{R}^{p_{i,k}^{X}})\times(\prod_{\mathcal{Y}_{i,k}\in\mathcal{D}_{\mathcal{Y}}}\mathbb{R}^{p_{i,k}^{Y}})\\
+\end{eqnarray*}
+, avec $\mathcal{D}_{\mathcal{X}}=\{\mathcal{X}_{i,k}|I(i,k)\textrm{ distincts},n_{i,k}^{X}\mbox{ maximal}\}$
+(idem pour les $\mathcal{Y}_{i}$). Il s'agit de l'espace sur lequel
+les indicateurs seront intégrés.
+
+Avec $\mathbf{X}_{i,c}$ les données projetées par injection canonique
+dans le sous-espace correspondant, bien définies pour tout $i$ et
+tout $c$, on fait l'hypothèse que les indicateurs possèdent tous
+un noyau : il existe $H_{c}$ un espace de fonctions sur $(\tilde{\mathcal{X}}_{c},\tilde{\mathcal{Y}}_{c})$
+à valeur dans $\mathbb{R}$ tel que pour tout $h\in H_{c}$ :
+\begin{itemize}
+\item h est ``suffisamment régulière'' (distributions classiques conviennent)
+\item $q=\int_{(\tilde{\mathcal{X}}_{c},\tilde{\mathcal{Y}}_{c})}h$ est
+une fonction de qualification du fait urbain (indicateur)
+\end{itemize}
+Par exemple, pour une moyenne des lignes de $\mathbf{X}_{i,c}$, on
+aura $h(x)=x\cdot f_{i,c}$ avec $f_{i,c}$ densité de la distribution,
+pour un taux suivant une certaine condition, on aura $f_{i,c}\chi_{condition}$
+; etc. Pour les $\mathbf{Y}$ on aura en général un Dirac (pour les
+calculs aggrégés).
+
+On pondère ensuite les indicateurs pour obtenir la fonction d'aggrégation
+sur lequel l'estimation statistique sera effectuée (nécessite une
+normalisation des indicateurs). Pour $i,c$ et $h_{c}\in H_{c}$ donnés,
+$w_{i,c}$ est une combinaison (suivant \cite{wang2009review}) de
+:
+\begin{itemize}
+\item poids objectif : importance locale du critère $w_{i,c}^{L}=\frac{\hat{q}_{i,c}}{\sum_{c}\hat{q}_{i,c}}$
+où $\hat{q}_{i,c}$ est un estimateur de $q_{c}$ pour les données
+$\mathbf{X}_{i,c}$
+\item poids subjectif : différentes méthodes (notations, ordre d'importance
+etc) revues dans \cite{wang2009review} pour donner un poids subjectif
+normalisé. En première implémentation, nous ne tiendrons pas compte
+de ce point car la mise en place complique considérablement le calcul
+(choix de la méthodes, nombreux tests, etc).
+\end{itemize}
+On est alors en mesure d'approximer la fonction aggrégée, utilisant
+un théorème classique d'approximation d'intégrale\cite{varet2010developpement}.
+Avec $\mathbf{X}_{i,c}=(\vec{X}_{i,c,l})_{1\leq l\leq n_{i,c}}$,
+$D_{i,c}=Discp_{\tilde{\mathcal{X}}_{c},\infty}(\mathbf{X}_{i,c})$
+la discrépance du nuage de points (\cite{niederreiter1972discrepancy})
+et $h\in H_{c}$, on a la majoration de l'erreur sur l'intégrale
+\[
+\left\Vert \int h_{c}-\frac{1}{n_{i,c}}\sum_{l}h_{c}(\vec{X}_{i,c,l})\right\Vert \leq K\cdot\left|\left|\left|h_{c}\right|\right|\right|\cdot D_{i,c}
+\]
+
+
+On a alors directement 
+\begin{eqnarray*}
+\left\Vert \int\sum w_{i,c}h_{c}-\frac{1}{n_{i,c}}\sum_{l}w_{i,c}h_{c}(\vec{X}_{i,c,l})\right\Vert  & \leq K\sum_{c}\left|w_{i,c}\right|\left|\left|\left|h_{c}\right|\right|\right|\cdot D_{i,c}\\
+\end{eqnarray*}
+ En supposant l'erreur réalisée et les indiacteurs normés, il est
+alors raisonnable de comparer les termes d'erreurs entre différentes
+évaluations, ceux-ci ne dépendant alors que de la distribution des
+données (robustesse statistique), des indicateurs en jeu (robustesse
+structurelle) et des pondérations. On définit alors un ratio de robustesse
+pour comparer deux évaluations de deux réalisations du fait urbain
+\[
+R_{i,i'}=\frac{\sum_{c}w_{i,c}\cdot D_{i,c}}{\sum_{c}w_{i',c}\cdot D_{i',c}}
+\]
+
+
+En définissant une relation d'ordre sur les réalisations par rapport
+à la position du ratio à 1, on définit un ordre complet sur les évaluations.
+Ainsi, ce ratio devrait nous permettre en théorie de comparer de nombreuses
+réalisations d'éco-quartiers en terme de robustesse de la qualification.
+Comme nous avons une étude de cas à deux éléments, il est pertinent
+de comparer entre eux des sous-systèmes associés à certains indicateurs
+seulement : si le ratio ne varie pas en enlevant certains indicateurs
+d'un coté ou de l'autre, ceux-ci ont peu de chance d'être significatifs.
+Au contraire, si on extrait une batterie d'indicateurs de taille minimale
+changeant pour chaque fortement le ratio de robustesse, on devrait
+avoir isolé des paramètres essentiels sous-jacent au système urbain.
+
+
+\subsection{Implémentation}
+
+
+\paragraph{Collecte, standardisation et inférence des données}
+
+La première étape cruciale pour l'implémentation concrète est la collecte
+et la standardisation des données représentant les faits urbains.
+On s'est rapidement heurté à de nombreux obstacles du fait que la
+plupart des indicateurs calculés étaient obtenus via des sources externes
+présentant leur résultat de manière aggrégée, ne permettant pas de
+redescendre à la granularité minimale de donnée ayant permis le calcul
+(ou bien dans certains cas n'étaient même pas basé sur des données,
+comme certaines prévisions du plan pour Sycomore qui doit encore être
+construit). On a pu pour certains indicateurs les avoirs tout de même,
+les différentes sources étant OpenStreetMap pour le réseau routier
+et les bâtiments, l'EGT pour les déplacements, l'INSEE pour la population.
+
+Dans de nombreux cas, des données était manquantes à granularité fine
+: par exemple, pour le réseau routier, il était facile d'obtenir les
+coordonnées des segments de route mais pas un attribut les qualifiant
+(ex site propre ou non, largeur de trottoir). On a donc inféré les
+attributs manquants par distribution statistique raisonnable (proportion
+totale de route en site propre correspondant à l'indicateur, attribuée
+aléatoirement aux segments), afin d'être capable de mener à bien l'évaluation.
+Ces inférences ne devraient modifier le résultat final, puisque l'ajout
+d'un nuage de point augmente la discrépance d'une égale constante
+pour les deux quartiers.
+
+Enfin, on a projeté chaque indicateur pour lequel on était en mesure
+d'associer des données (une dizaine) dans un espace de même dimension
+physique, celui du gain monétaire par déplacement. Grossièrement,
+chaque indicateur peut être ramené à une proportion de report modal
+VP vers modes propres, qu'on traduit en gain d'emission de CO$_{2}$,
+ramené en valeur monétaire par le coût de la tonne de carbone (47¤/T\footnote{ADEME, 2006})
+et la distance moyenne d'un déplacement.
+
+
+\paragraph{Implémentation}
+
+Les données GIS ont été traitées par QGIS et NL afin d'être standardisées.
+Les calculs statistiques ont été implémentés sous R, profitant du
+package DiceDesign \cite{franco20092} permettant de calculer directement
+la discrépance d'un nuage de points.
+
+
+\paragraph{Résultats}
+
+Le ratio de robustesse Descartes/Sycomore, calculé avec tous les indicateurs,
+est $R_{D,B}=0,87$. Cela signifie que l'évaluation sur Sycomore est
+plus robuste, mais il est difficile de conclure quantitativement car
+on ne dispose pas d'échelle pour ce ratio. On s'attendait toutefois
+à ce résultat car les données correspondant à Sycomore sont un peu
+plus fournies.
+
+Les tests de sensibilité à différentes combinaisons des indicateurs
+montraient un comportement anarchique ($R$ de 0.3 à 1.6 de manière
+apparament aléatoire) et il est difficile de tirer des conclusions
+telles une dimension minimale de caractérisation. Il est difficile
+de savoir si ce comportement est spécifique à ces cas ou si le modèle
+est réellement chaotique (ce qui est possible vu la dépendance directe
+à des données complexes).
+
+Une direction de recherche possible après une précision, validation
+et confortation de la méthode au delà des premiers résultats obtenus
+serait l'utilisation de l'évaluation de la robustesse pour comparer
+différents jeux d'indicateurs et s'orienter vers une scénarisation
+: en choisissant de favoriser tel aspect, on peut alors voir l'impact
+sur la performance globale de l'écoquartier en terme de distance au
+``standard'' (représentée par la robustesse). Toutefois, l'analyse
+de sensibilité de la méthode a montré qu'en première approche, une
+telle application était impossible, vu les comportements non-standard
+des modèles, qui nécessiteraient une exploration approfondie.
+
+
+\paragraph{Critique}
+
+Le manque de recul sur la méthode ne permet pas de dire son potentiel
+ou tirer des conclusions efficaces. Il faudrait après cette première
+implémentation revenir sur la théorie et adapter en fonction (données
+d'entrée multi-échelle, ou bien focus sur 2 quartiers seulement et
+non un plus grand nombre ?).
+
+
+\section{Scénarisation}
+
+
+\subsection{Hypothèses}
+
+Cette phase de scénarisation a pour but de voir dans quelle mesure
+la mise en place d'une politique volontariste allant
+dans le sens du développement durable se concrétise dans notre grille
+d'indicateurs. Il s'agit ainsi de
+voir les effets tangibles de telles décisions, afin de juger si in
+fine leur impact environnemental et social justifie leur coût. Deux
+études seront ainsi menées, une par quartier, et portant sur deux
+points centraux du sujet des écoquartiers, à savoir la forme et la
+mobilité urbaine.
+
+
+\subsection{Résultats}
+
+En ce qui concerne la Cité Descartes, on peut par exemple décider
+de s'intéresser à un indicateur en particulier, qui
+a des répercussions assez larges sur nombre d'autres,
+et voir en quoi son amélioration peut modifier le bilan de mobilité
+et le rapprocher de celui d'un écoquartier planifié.
+Prenons donc la densité d'activité humaine, ou densité
+humaine nette, qui décrit de façon assez satisfaisante l'intensité
+d'occupation humaine des espaces urbanisés, et qui
+permet de comparer des tissus urbains différents, la forme urbaine
+jouant fortement sur la mobilité. En comparant le DAH de la Cité Descartes
+et de Sycomore et en faisant une hypothèse sur une augmentation de
+celui-ci dans le premier quartier, on peut évaluer l'impact
+de celle-ci sur nos autres indicateurs et estimer les variations induites,
+impactant de ce fait le bilan de mobilité (voir annexe B) . Cependant,
+cette démarche doit éviter l'écueil consistant à trop
+faire parler les résultats, induisant de ce fait des problèmes de
+cooccurrence.
+
+Pour le quartier Sycomore, un projet de BHNS, porté par la mairie
+et qui a pour but de traverser d'Est en Ouest le futur
+écoquartier, a retenu notre attention. Sur la base de la projection
+la moins coûteuse suggérée dans le schéma de liaisons douces de la
+commune, nous avons pu estimer les coûts d'aménagement
+de cette infrastructure (élargissement des voies, système de détection
+et de priorité aux feux, ...). En parallèle, nous avons établi deux
+scénarios décrivant les pratiques de déplacements des habitants de
+l'écoquartier pour se rendre à Paris, un scénario
+avec et l'autre sans le BHNS. Pour chacun de ces scénarios
+une estimation sur les parts modales ainsi que sur des critères tels
+que le temps d'accès au RER ont été réalisés (voir
+annexe B). Tout ceci permet de mesurer l'impact structurant
+du BHNS sur le futur quartier.
+
+
+\subsection{Perspectives}
+
+L'étude peut se poursuivre en appliquant le référentiel
+à d'autres quartiers (avec éventuellement des données
+plus fines) afin d'établir des valeurs de référence
+et permettre une comparaison plus fine, en regardant les tendances
+menant à l'éco-mobilité. En considérant un plus grand
+nombre de quartiers, nous serions aussi capables d'éventuellement
+recalibrer le référentiel afin de rendre la récolte des données plus
+standardisée et donc plus simple. Bien que des éléments de coût soient
+donnés en annexe C afin de mettre en perspectives les solutions pour
+une mobilité respectueuse du dévelopement durable, une analyse socio-économique
+plus poussée serait également un complément utile à l'évaluation
+de la mobilité dans les écoquartiers. L'étude de la
+robustesse pourrait aussi se poursuivre sur un plus grand nombre de
+quartiers et avec des données plus fines. 
+
+
+\section*{Conclusion}
+
+Les écoquartiers sont un sujet dont on parle beaucoup de nos jours
+car ils se veulent la concrétisation de multiples réflexions autour
+du développement durable. Pourtant, force est de constater que leur
+conception se limite encore trop souvent à des évolutions technologiques,
+notamment sur le choix des matériaux mis en ½uvre, alors que c'est
+d'une véritable révolution des usages dont il devrait
+être question. Notre étude a l'ambition d'apporter
+un regard critique sur la prise en compte de la mobilité dans les
+projets d'écoquartier, et de proposer un nouveau référentiel
+d'évaluation, si possible robuste, à même de capter
+la complexité des usages de mobilité.
+
+\bibliographystyle{plain}
+\nocite{*}
+\bibliography{/Users/Juste/Documents/Cours/TAMUR/Biblio/biblio}
+
+
+\newpage{}
+
+
+\section*{Annexe A : Evaluation des quartiers et hypothèses}
+
+\hspace{-2cm}
+
+\begin{tabular}{|>{\centering}p{3cm}|>{\raggedright}p{5cm}|>{\centering}p{7cm}|}
+\hline 
+Objectifs & Hypothèses & Evaluation\tabularnewline
+\hline 
+\hline 
+Prise en compte du contexte ex-ante & Utilisation des parts modales de Champs-sur-Marne et Bussy-Saint-Georges & Cité Descartes et Sycomore ont été installé à proximité du RER A,
+dans une ville nouvelle disposant d'un bassin d'emploi
+conséquent ; pourtant, Champs-sur-Marne et Bussy-Saint-Georges ont
+des habitudes d'usage de la voiture très importantes
+qu'il faudra prendre en compte\tabularnewline
+\hline 
+Prioriser les modes actifs & \multirow{1}{5cm}{On suppose Cité Descartes au niveau de Sycomore en termes de site
+propre d'où égalité ; ratio +10\% pour Sycomore pour
+stationnement à vélo } & Correspond à l'archétype du bon écoquartier et Sycomore
+n'échappe pas à la règle ; en cela Cité Descartes
+s'en sort très bien et propose des sites propres pour
+les vélos, des cheminements alternatifs très intéressants\tabularnewline
+\hline 
+Rendre la voiture plus durable & Utilisation des données d'urbanisme & Beaucoup plus difficile, d'autant plus étant donné
+le contexte ; Sycomore est loin devant Cité Descartes même si sa position
+n'est pas tout à fait cohérente ;\tabularnewline
+\hline 
+Décourager le recours à la VP &  & Là encore, assez difficile ; Sycomore ne semble pas vouloir mettre
+en place en politique volontariste en termes de stationnement et Cité
+Descartes non plus évidemment ;\tabularnewline
+\hline 
+Renforcer l'utilisation des TC &  & Une fois encore, malgré la planification possible, le contexte joue
+et Sycomore a donc des difficultés à être compétitif sur cet objectif
+; cependant, les transports de desserte fine prévus pourront inverser
+la donne et permettre une optimisation du maillage territorial\tabularnewline
+\hline 
+Cohérence entre urbanisme et transport & Approximation du nombre de services & Cet objectif permet clairement une politique volontariste de la part
+de l'aménageur, et en cela Sycomore est assez performante
+puisqu'elle propose des densités et une mixité très
+intéressante pour un quartier durable\tabularnewline
+\hline 
+Utilisation de l'écoquartier ex-post &  & Cité Descartes n'ayant pas été conçu comme un écoquartier,
+l'usage qui en est fait est loin d'être
+durable avec un taux de motorisation élevé, voire de multimotorisation,
+un taux d'utilisation des parkings pas optimal et
+une faible mutualisation, et partage ; en revanche, en phase amont
+de projet, Sycomore affiche des objectifs prometteurs, pas tant d'un
+point de vu de la voiture, que de celui de l'optimisation
+et de la rationalisation.\tabularnewline
+\hline 
+\end{tabular}
+
+\newpage{}
+
+
+\section*{Annexe B : Compléments à la scénarisation}
+
+Le projet Sycomore est fondé sur un scénario assez volontariste en
+termes de densité puisqu'il ferait passer la densité
+moyenne brute de la commune de Bussy-Saint-Georges de 14 hab/km\texttwosuperior{}
+en 2006 à 22 hab/km\texttwosuperior{}, soit une augmentation de plus
+de 50\%. Un indicateur plus pertinent pour observer à la fois la densité
+mais également sa cohérence avec la mixité fonctionnelle est la densité
+d'activité humaine. Elle vaudrait approximativement
+à Sycomore 83 P+E/ha urb, soit une valeur très forte proche de celle
+d'une agglomération dense de Petite Couronne. La programmation
+prévoit également une implantation d'équipements publics
+structurants avec un COS moyen à la parcelle de 1. Dans le cadre d'un
+écoquartier planifié, visant qui plus est une labellisation, un tel
+projet n'est pas surprenant étant donné que l'écoquartier
+se conçoit semble-t-il actuellement comme un pas vers la ville dense.
+
+En revanche, la Cité Descartes n'ayant pas été conçu
+comme un écoquartier, bien qu'elle puisse en présenter
+certains aspects, cet indicateur de densité humaine n'est
+pas optimal dans une optique de développement durable. Le DAH pour
+toute la commune de Champs-sur-Marne vaut 46 P+E/ha urb, ce qui est
+dans la moyenne pour une ville nouvelle, mais elle vaut environ 62
+P+E/ha urb dans la Cité Descartes, grâce essentiellement à une assez
+forte densité d'emplois. L'écart qui
+sépare les deux quartiers est donc conséquent et on peut se demander
+l'impact d'une amélioration du DAH
+de la Cité Descartes sur le bilan de mobilité. On peut envisager deux
+scénarios : l'un où la Cité Descartes comblerait la
+moitié de son retard et un autre plus volontariste où elle rattraperait
+Sycomore. Soit un DAH de 72 ou de 83 P+E/ha urb. En faisant l'hypothèse
+dans les deux cas que le rapport population sur emploi reste globalement
+le même, autour de 0.34, cela donne les P+E hypothétiques suivants
+(en utilisant des données de 2008) : 
+
+\vspace{0.3cm}
+
+\begin{tabular}{|c|c|c|c|}
+\hline 
+ & 0 & 1 & 2\tabularnewline
+\hline 
+\hline 
+P & 1700 & 1973 & 2274\tabularnewline
+\hline 
+E & 5000 & 5803 & 6690\tabularnewline
+\hline 
+\end{tabular}
+
+\vspace{0.3cm}
+
+Avec des P+E pareils, l'accessibilité en termes d'emplois
+s'améliore certainement sensiblement, mais pas nécessairement
+pour la population de la Cité Descartes ou de Champs-sur-Marne. De
+plus, les valeurs précédentes se répercuteraient dans notre grille
+par l'amélioration de la mixité fonctionnelle, puisqu'il
+n'est pas possible d'implanter autant
+d'individus sans installer les équipements nécessaires.
+Les deux scénarios seraient en cela relativement identiques. Qui plus
+est, l'augmentation du DAH faciliterait l'optimisation
+du maillage territorial en rendant accessible la majorité des emplois
+et des logements. En revanche, le scénario 2 dégraderait certainement
+l'objectif de prioriser les modes actifs, puisqu'une
+telle augmentation du nombre d'individus nécessiterait
+certainement de nouveaux aménagements plus favorables à la voiture.
+En effet, la densité humaine s'accompagne généralement
+d'une augmentation de la congestion. In fine, en ce
+qui concerne la Cité Descartes, non conçue à l'origine
+pour avoir la densité d'un écoquartier, le scénario
+1 semblerait plus propice à l'amélioration du bilan
+de mobilité selon notre grille.
+
+
+\paragraph*{Contexte du projet de BHNS à Bussy-Saint Georges}
+
+Un projet de BHNS est à l'étude dans la ville de Bussy-Saint
+Georges et aurait un rôle structurant pour le futur écoquartier. Il
+s'inscrit en effet dans la stratégie de liaisons douces
+de la commune en reliant l'écoquartier d'Est
+en Ouest vers la gare de Bussy d'une part et vers
+le futur parc d'autre part, et du nord au sud du centre-ville
+vers la ZAC de la Rucherie.
+
+La question est de mettre en perspective les apports de cette nouvelle
+infrastructure au vu des investissements économiques (coût du BHNS).
+L'alternative privilégiée dans le dernier Schéma Directeur
+Communal des Liaisons Douces de Bussy-Saint Georges prévoit un coût
+de 855 k¤ pour l'aménagement de voirie, sachant que
+le projet porte sur un tracé de 3 km environ, du futur écoquartier
+Sycomore jusqu'au boulevard de Lagny. Le coût d'exploitation
+des bus supplémentaires n'est pas comptabilisé.
+
+A partir de ce projet, nous pouvons faire l'hypothèse
+que, une fois mieux desservie en TC avec la gare RER, les habitants
+de l'écoquartier de Bussy-Saint Georges aient des
+usages de déplacements domicile-travail qui se rapprochent de ceux
+de l'Ouest de Marne-la-Vallée (c'est-à-dire
+environ 38 \% de part modale en transports en commun, contre 31 \%
+dans la partie Est). 
+
+\newpage{}
+
+
+\section*{Annexe C : Eléments de coûts}
+
+Notre étude et notre référentiel en particulier semble suggérer qu'une
+mobilité respectueuse des principes de développement durable est aisément
+réalisable si tant est que l'on se conforme à certains
+indicateurs. Pourtant, tout a un coût et la mobilité n'est
+pas le point le plus médiatique des écoquartiers comme nous l'avons
+évoqué, d'où un budget parfois limité. Pourtant, hormis
+les aménagements pour les modes doux et pour les mobilités durables,
+les coûts sont relativement limités, excepté en ce qui concerne les
+politiques de stationnement, qui influent beaucoup sur la mobilité.
+La rationalisation, mutualisation et l'enterrement
+des parkings est en effet souvent prôné afin d'infléchir
+un changement vers l'écomobilité. Et de tels parkings,
+souterrains ou semi-enterré quelque soit le terrain, permettant de
+recharger des véhicules électriques ou d'organiser
+un espace d'autopartage, sont coûteux. On compte en
+général qu'une place de parking nécessite 60 m\texttwosuperior{}
+SUBL (Surface Utile Brute Locative) et coûte (pour les premières estimations)
+entre 10 000 et 30 000 ¤. Quand on considère l'écoquartier
+Sycomore, comportant à terme 10 000 habitants, soit environ 4000 ménages,
+en comptant 0.8 place par logement (i.e. approximativement par ménage),
+on obtient un coût de parking durable moyen de plus de 60 000 000
+¤, ce qui est une somme astronomique. La mise en place d'une
+politique sur le stationnement, passant par la construction de parkings
+en structure économes en espace donc enterrés et sur plusieurs niveaux,
+n'est donc pas à la portée de n'importe
+quelle bourse. 
+
+Proposer des aménagements en voirie conciliant l'ensemble
+des mobilités (modes doux et voitures) à un coût. D'après
+les données fournies par l'AFTRP, l'Agence
+Foncière et Technique de la Région Parisienne, le coût moyen d'une
+voirie classique composée d'une chaussée de 7m et
+de 2 trottoirs de 2m, est de 1 900 euros/ml, en rajoutant des stationnements
+de chaque côté le coût passe à 2 200 euros/ml. Si la place de stationnement
+de 2m de largeur, d'un côté de la chaussée est remplacée
+par une piste cyclable de 3m de largeur, le coût de la voirie augmente
+encore de 300 euros. Par ailleurs, le prix de la chaussée diminue
+très fortement en fonction de sa largeur, passant de 150 euros/m\texttwosuperior{}
+pour une largeur de 3-4 mètres et 94 euros pour une largeur de 7m
+alors que des voiries encourageant la circulation pietonne ou en vélo
+demande davantage de mobiliers urbains. Les coûts des aménagements
+piétonniers, d'une allée arborée, d'une
+piste cyclable ou d'une place piétonne sont nettement
+plus élevés que celui de la simple chaussée n'incitant
+pas à créer des espaces accueillant et sécurisés pour l'utilisation
+des modes doux.
+
+Les efforts en termes de développement durable d'un
+écoquartier résultent donc d'un arbitrage entre les
+différents postes, et un écoquartier idéal n'est pas
+prêt de pouvoir exister.
+
+
+\subsubsection*{Coûts moyens: (AFTRP)}
+\begin{itemize}
+\item Allée arborée: 230 euros/m\texttwosuperior{}
+\item Chaussée: 94 euros/m\texttwosuperior{} $<$ coût $<$ 150 euros/m\texttwosuperior{} 
+\item Trottoir/aménagement piétonnier: 130 euros/m\texttwosuperior{} 
+\item Place piétonne: 180 euros/m\texttwosuperior{} 
+\item Aire de stationnement (60m\texttwosuperior{}): 5 700 euros 
+\item Espace vert: 170 euros/m\texttwosuperior{} 
+\item Piste cyclable: 75euros/m\texttwosuperior{} 
+\item TCSP sur une largeur de 4m: 380 euros/ml \end{itemize}
+
+\end{document}
